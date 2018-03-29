@@ -1,4 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 
 class Gallery extends Component {
 

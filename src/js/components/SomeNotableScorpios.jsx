@@ -22,23 +22,12 @@ class SomeNotableScorpios extends Component {
           <h3 className="some-notable-scorpios-heading">Some Notable Scorpios</h3>
           <h4 className="some-notable-scorpios-subheading">With our drag and drop system you can create pages in minutes!</h4>
           <div className="some-notable-scorpios-collection-container">
-          <Gallery
-            sectionTitle={appData[2].sectionTitle}
-            someNotableScorpiosData={appData[2].someNotableScorpiosData}
-          />
-            {/* <div className="some-notable-scorpios-collection-row">
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-            </div>
-            <div className="some-notable-scorpios-collection-row">
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-            </div> */}
+            <Gallery
+              sectionTitle={appData[2].sectionTitle}
+              someNotableScorpiosData={appData[2].someNotableScorpiosData}
+            />
             <button className="some-notable-scorpios-button">See More</button>
+            <div className="filler"></div>
           </div>
         </div>
       </section>

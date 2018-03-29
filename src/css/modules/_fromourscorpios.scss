@@ -1,6 +1,5 @@
 #from-our-scorpios {
   width: 100%;
-  // height: 1179px;
   background: $background-image-color url('./images/from-our-scorpios.jpg') no-repeat center;
   background-size: cover;
   .wrapper {
@@ -15,6 +14,9 @@
       padding-top: 60px;
       .from-our-scorpios-button {
         @include scorpio-button($black, $accent-color);
+      }
+      .filler {
+        padding-bottom: 60px;
       }
     }
   }

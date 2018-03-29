@@ -27,6 +27,7 @@ class FromOurScorpios extends Component {
               fromOurScorpiosData={appData[1].fromOurScorpiosData}
             />
             <button className="from-our-scorpios-button">See More</button>
+            <div className="filler"></div>
           </div>
         </div>
       </section>
