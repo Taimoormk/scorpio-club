@@ -6,6 +6,8 @@ import { connect } from 'react-redux'
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
+import Gallery from './Gallery';
+import { appData } from './appData';
 
 class FromOurScorpios extends Component {
 
@@ -20,18 +22,10 @@ class FromOurScorpios extends Component {
           <h3 className="from-our-scorpios-heading">From Our Scorpios</h3>
           <h4 className="from-our-scorpios-subheading">With our drag and drop system you can create pages in minutes!</h4>
           <div className="from-our-scorpios-collection-container">
-            <div className="from-our-scorpios-collection-row">
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-            </div>
-            <div className="from-our-scorpios-collection-row">
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-              <img className="" src="./images/giphy.gif" />
-            </div>
+            <Gallery
+              sectionTitle={appData[1].sectionTitle}
+              fromOurScorpiosData={appData[1].fromOurScorpiosData}
+            />
             <button className="from-our-scorpios-button">See More</button>
           </div>
         </div>

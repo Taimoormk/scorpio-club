@@ -1,0 +1,17 @@
+#gallery {
+  margin: 0px auto;
+  .from-our-scorpios-gallery {
+    width: 350px;
+    height: 350px;
+    display: inline-block;
+    border: 3px solid $white;
+    margin: 10px;
+    border-radius: 7px;
+    cursor: pointer;
+    .from-our-scorpios-gallery-item {
+      width: 350px;
+      height: 350px;
+      border-radius: 7px;
+    }
+  }
+}

@@ -1,4 +1,4 @@
-const appData = [
+export const appData = [
   {
     id: Math.random(),
     sectionTitle: 'Scorpio Club',
@@ -13,7 +13,51 @@ const appData = [
     sectionHeading: 'From Our Scorpios',
     sectionH3: 'With our drag and drop system you can create pages in minutes!',
     sectionH4: '',
-    sectionButtonText: 'see more'
+    sectionButtonText: 'see more',
+    fromOurScorpiosData: [
+      {
+        id: 1,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 2,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 3,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 4,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 5,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 6,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      }
+    ]
   },
   {
     id: Math.random(),
@@ -21,7 +65,51 @@ const appData = [
     sectionHeading: 'Some Notable Scorpios',
     sectionH3: 'With our drag and drop system you can create pages in minutes!',
     sectionH4: '',
-    sectionButtonText: 'see more'
+    sectionButtonText: 'see more',
+    someNotableScorpiosData: [
+      {
+        id: 1,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 2,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 3,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 4,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 5,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      },
+      {
+        id: 6,
+        postTitle: 'Best Scorpios',
+        postImg: './images/bill-gates.jpg',
+        postCategory: 'Web',
+        postDate: '16 Nov, 2017'
+      }
+    ]
   },
   {
     id: Math.random(),
