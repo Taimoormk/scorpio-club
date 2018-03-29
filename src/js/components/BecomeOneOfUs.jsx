@@ -18,8 +18,9 @@ class BecomeOneOfUs extends Component {
       <section id="become-one-of-us">
         <div className="wrapper">
           <h3 className="become-one-of-us-heading">Become One Of Us</h3>
-          <h4 className="become-one-of-us-subheading">Society excited by cottage private an it esteems. Fully begin on by wound an. Girl rich in do up or both. At declared in as rejoiced of together.</h4>
+          <h4 className="become-one-of-us-subheading">Society excited by cottage private an it esteems. Fully begin on by wound an. <br /> Girl rich in do up or both. At declared in as rejoiced of together.</h4>
           <button className="become-one-of-us-button">See More</button>
+          <div className="filler"></div>
         </div>
       </section>
     );

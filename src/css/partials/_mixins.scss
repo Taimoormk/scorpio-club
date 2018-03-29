@@ -6,20 +6,20 @@
   width: $w;
 }
 
-@mixin scorpio-button() {
+@mixin scorpio-button($c, $bsc) {
   width: 150px;
   height: 50px;
   background-color: $white;
   border-radius: 15px;
-  box-shadow: 4px 4px 10px $accent-color;
-  margin: 60px auto;
+  margin: 30px auto 0px auto;
   display: block;
   text-transform: uppercase;
   font-family: $font-family;
   font-weight: 700;
   font-size: 13px;
-  color: $black;
   letter-spacing: 0.1em;
+  color: $c;
+  box-shadow: 4px 4px 10px $bsc;
 }
 
 // ########## All Text Mixins Here ##########
@@ -39,7 +39,7 @@
   font-weight: 700;
   font-size: 30px;
   margin: 0px;
-  padding-top: 30px;
+  padding-top: 60px;
   text-align: $t-a;
   color: $c;
   letter-spacing: 0.05em;
@@ -75,6 +75,7 @@
   line-height: 22px;
   text-align: $t-a;
   color: $c;
+  letter-spacing: 0.05em;
 }
 
 // ########## All Image Mixins Here ##########

@@ -1,6 +1,6 @@
 #become-one-of-us {
   width: 100%;
-  height: 350px;
+  // height: 350px;
   background: $background-image-color url('./images/become-a-scorpio.jpg') no-repeat center;
   background-size: cover;
   .wrapper {
@@ -10,9 +10,13 @@
     }
     .become-one-of-us-subheading {
       @include H4(center, $primary-color);
+      padding-top: 30px;
     }
     .become-one-of-us-button {
-      @include scorpio-button();
+      @include scorpio-button($black, $accent-color);
+    }
+    .filler {
+      padding-bottom: 60px;
     }
   }
 }

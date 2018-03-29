@@ -5,8 +5,8 @@
   background-size: cover;
   .wrapper{
     @include wrapper($wrapper-width);
+    padding-top: calc((100vh - 600px)/2);
     .hero-content-container {
-      margin: auto;
       .hero-logo {
         display: block;
         margin: 0px auto;
@@ -21,7 +21,7 @@
         @include H4(center, $white);
       }
       .hero-button {
-        @include scorpio-button();
+        @include scorpio-button($black, $accent-color);
       }
     }
   }

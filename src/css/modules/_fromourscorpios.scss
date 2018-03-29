@@ -14,7 +14,7 @@
     .from-our-scorpios-collection-container {
       padding-top: 60px;
       .from-our-scorpios-button {
-        @include scorpio-button();
+        @include scorpio-button($black, $accent-color);
       }
     }
   }
