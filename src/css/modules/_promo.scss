@@ -15,7 +15,8 @@
         height: 250px;
         float: left;
         .promo-image {
-          @include promo-image('./images/scorpio-club.jpg')
+          // @include promo-image('./images/scorpio-club-promo-1.png');
+          margin: 0px auto;
         }
       }
       .promo-text-container {

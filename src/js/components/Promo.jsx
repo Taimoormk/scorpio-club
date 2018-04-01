@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -8,25 +8,27 @@ import { connect } from 'react-redux'
 // ########## Import Components Here ##########
 
 class Promo extends Component {
+  
+  componentDidMount() {
 
-  constructor() {
-    super();
   }
 
   render() {
+    const { promoData } = this.props;
     return (
       <section id="promo">
         <div className="wrapper">
-          <h3 className="promo-heading">The Problem Solver...</h3>
+          <h3 className="promo-heading">{promoData.postTitle}</h3>
           <div className="promo-content-container">
             <div className="promo-image-container">
               <div className="promo-image">
+                <img src={promoData.postImage} width="250px" alt="Scorpio Club Promo" />
               </div>
             </div>
             <div className="promo-text-container">
-              <p className="promo-text">In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an  uncanny ability to work out solutions from scratch.</p>
+              <p className="promo-text">{promoData.postDescription}</p>
             </div>
-            <div className="clear"></div>
+            <div className="clear" />
           </div>
         </div>
       </section>
@@ -35,12 +37,17 @@ class Promo extends Component {
 }
 
 Promo.propTypes = {
+  promoData: shape({
+    postTitle: string.isRequired,
+    postImage: string.isRequired,
+    postDescription: string.isRequired
+  }).isRequired,
 }
 
-function mapStateToProps(state) {
-  return {
-    key: null
-  };
-};
+// function mapStateToProps(state) {
+//   return {
+//     key: null
+//   };
+// };
 
-export default connect(mapStateToProps, {})(Promo);
+export default connect(null, {})(Promo);

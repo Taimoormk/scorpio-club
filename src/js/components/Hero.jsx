@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -9,8 +9,8 @@ import { connect } from 'react-redux'
 
 class Hero extends Component {
 
-  constructor() {
-    super();
+  componentDidMount() {
+
   }
 
   render() {
@@ -18,7 +18,7 @@ class Hero extends Component {
       <section id="hero">
         <div className="wrapper">
           <div className="hero-content-container">
-            <img className="hero-logo" src="./images/scorpio-club-white.png" />
+            <img className="hero-logo" src="./images/scorpio-club-white.png" alt="Scorpio Club Logo" />
             <h1 className="hero-heading">Scorpio Club</h1>
             <h3 className="hero-subheading">Scorpio is the best sign ever!</h3>
             <h4 className="hero-text">Join us to know all the reasons WHY!</h4>
@@ -33,10 +33,10 @@ class Hero extends Component {
 Hero.propTypes = {
 }
 
-function mapStateToProps(state) {
-  return {
-    key: null
-  };
-};
+// function mapStateToProps(state) {
+//   return {
+//     key: null
+//   };
+// };
 
-export default connect(mapStateToProps, {})(Hero);
+export default connect(null, {})(Hero);

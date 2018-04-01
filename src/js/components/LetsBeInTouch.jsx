@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -9,8 +9,8 @@ import { connect } from 'react-redux'
 
 class LetsBeInTouch extends Component {
 
-  constructor() {
-    super();
+  componentDidMount() {
+    
   }
 
   render() {
@@ -24,20 +24,20 @@ class LetsBeInTouch extends Component {
             <input className="lets-be-in-touch-input" type="email" placeholder="Email" name="email" />            
             <input className="lets-be-in-touch-button" type="submit" value="Submit" />
           </form>
-          <div className="filler"></div>
+          <div className="filler" />
         </div>
       </section>
     );
   }
 }
 
-LetsBeInTouch.propTypes = {
-}
+// LetsBeInTouch.propTypes = {
+// }
 
-function mapStateToProps(state) {
-  return {
-    key: null
-  };
-};
+// function mapStateToProps(state) {
+//   return {
+//     key: null
+//   };
+// };
 
-export default connect(mapStateToProps, {})(LetsBeInTouch);
+export default connect(null, {})(LetsBeInTouch);

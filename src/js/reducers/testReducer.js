@@ -7,7 +7,8 @@ const initial = {
 export default function(state=initial, action) {
   switch(action.type) {
     case FILL_ME:
-      return {...state}
+      return {...state};
+    default:
+    return state;
   }
-  return state;
 }

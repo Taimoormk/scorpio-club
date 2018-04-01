@@ -1,18 +1,18 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
 import Gallery from './Gallery';
-import { appData } from './appData';
+import appData from './appData';
 
 class FromOurScorpios extends Component {
 
-  constructor() {
-    super();
+  componentDidMount() {
+
   }
 
   render() {
@@ -23,11 +23,11 @@ class FromOurScorpios extends Component {
           <h4 className="from-our-scorpios-subheading">With our drag and drop system you can create pages in minutes!</h4>
           <div className="from-our-scorpios-collection-container">
             <Gallery
-              sectionTitle={appData[1].sectionTitle}
-              fromOurScorpiosData={appData[1].fromOurScorpiosData}
+              sectionTitle={appData[2].sectionTitle}
+              fromOurScorpiosData={appData[2].fromOurScorpiosData}
             />
             <button className="from-our-scorpios-button">See More</button>
-            <div className="filler"></div>
+            <div className="filler" />
           </div>
         </div>
       </section>
@@ -38,10 +38,10 @@ class FromOurScorpios extends Component {
 FromOurScorpios.propTypes = {
 }
 
-function mapStateToProps(state) {
-  return {
-    key: null
-  };
-};
+// function mapStateToProps(state) {
+//   return {
+//     key: null
+//   };
+// };
 
-export default connect(mapStateToProps, {})(FromOurScorpios);
+export default connect(null, {})(FromOurScorpios);

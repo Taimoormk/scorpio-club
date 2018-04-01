@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -9,8 +9,8 @@ import { connect } from 'react-redux'
 
 class Footer extends Component {
 
-  constructor() {
-    super();
+  componentDidMount() {
+
   }
 
   render() {
@@ -22,14 +22,14 @@ class Footer extends Component {
             <p className="footer-disclaimer">© 2018 Scorpio Club | All rights reserved.</p>
           </div>
           <div className="footer-container-right">
-            <p className="footer-heading"></p>
+            <p className="footer-heading" />
             <div className="footer-disclaimer">
-              <a href="#" target="_blank"><i className="fab fa-facebook fa-2x"></i></a>
-              <a href="#" target="_blank"><i className="fab fa-twitter-square fa-2x"></i></a>
-              <a href="#" target="_blank"><i className="fab fa-instagram fa-2x"></i></a>
+              <a href="https://facebook.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook fa-2x" /></a>
+              <a href="https://twitter.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-twitter-square fa-2x" /></a>
+              <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram fa-2x" /></a>
             </div>
           </div>
-          <div className="clear"></div>
+          <div className="clear" />
         </div>
       </section>
     );
@@ -39,10 +39,10 @@ class Footer extends Component {
 Footer.propTypes = {
 }
 
-function mapStateToProps(state) {
-  return {
-    key: null
-  };
-};
+// function mapStateToProps(state) {
+//   return {
+//     key: null
+//   };
+// };
 
-export default connect(mapStateToProps, {})(Footer);
+export default connect(null, {})(Footer);

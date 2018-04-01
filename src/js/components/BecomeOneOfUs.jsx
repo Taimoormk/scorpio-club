@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -9,8 +9,8 @@ import { connect } from 'react-redux'
 
 class BecomeOneOfUs extends Component {
 
-  constructor() {
-    super();
+  componentDidMount() {
+
   }
 
   render() {
@@ -20,7 +20,7 @@ class BecomeOneOfUs extends Component {
           <h3 className="become-one-of-us-heading">Become One Of Us</h3>
           <h4 className="become-one-of-us-subheading">Society excited by cottage private an it esteems. Fully begin on by wound an. <br /> Girl rich in do up or both. At declared in as rejoiced of together.</h4>
           <button className="become-one-of-us-button">See More</button>
-          <div className="filler"></div>
+          <div className="filler" />
         </div>
       </section>
     );
@@ -30,10 +30,10 @@ class BecomeOneOfUs extends Component {
 BecomeOneOfUs.propTypes = {
 }
 
-function mapStateToProps(state) {
-  return {
-    key: null
-  };
-};
+// function mapStateToProps(state) {
+//   return {
+//     key: null
+//   };
+// };
 
-export default connect(mapStateToProps, {})(BecomeOneOfUs);
+export default connect(null, {})(BecomeOneOfUs);

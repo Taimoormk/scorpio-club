@@ -12,7 +12,7 @@ import App from './components/App';
 
 const store = createStore(
   rootReducer,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  window.devToolsExtension && window.devToolsExtension()
 );
 
 ReactDOM.render(

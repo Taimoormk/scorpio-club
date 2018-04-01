@@ -1,18 +1,18 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
 import Gallery from './Gallery';
-import { appData } from './appData';
+import appData from './appData';
 
 class SomeNotableScorpios extends Component {
 
-  constructor() {
-    super();
+  componentDidMount() {
+
   }
 
   render() {
@@ -23,11 +23,11 @@ class SomeNotableScorpios extends Component {
           <h4 className="some-notable-scorpios-subheading">With our drag and drop system you can create pages in minutes!</h4>
           <div className="some-notable-scorpios-collection-container">
             <Gallery
-              sectionTitle={appData[2].sectionTitle}
-              someNotableScorpiosData={appData[2].someNotableScorpiosData}
+              sectionTitle={appData[3].sectionTitle}
+              someNotableScorpiosData={appData[3].someNotableScorpiosData}
             />
             <button className="some-notable-scorpios-button">See More</button>
-            <div className="filler"></div>
+            <div className="filler" />
           </div>
         </div>
       </section>
@@ -38,10 +38,9 @@ class SomeNotableScorpios extends Component {
 SomeNotableScorpios.propTypes = {
 }
 
-function mapStateToProps(state) {
-  return {
-    key: null
-  };
-};
+// function mapStateToProps(state) {
+//   return {
+//   };
+// };
 
-export default connect(mapStateToProps, {})(SomeNotableScorpios);
+export default connect(null, {})(SomeNotableScorpios);

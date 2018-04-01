@@ -1,4 +1,4 @@
-export const appData = [
+const appData = [
   {
     id: Math.random(),
     sectionTitle: 'Scorpio Club',
@@ -6,6 +6,39 @@ export const appData = [
     sectionH3: 'Scorpio is the best sign ever!',
     sectionH4: 'Join us to know all the reasons WHY!',
     sectionButtonText: 'let me in'
+  },
+  {
+    id: Math.random(),
+    promoPosts: [
+      {
+        id: 1,
+        postTitle: 'The Problem Solver1',
+        postImage: './images/scorpio-club-promo-1.png',
+        postDescription: 'In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.',
+        imageDirection: 'left',
+      },
+      {
+        id: 2,
+        postTitle: 'The Problem Solver2',
+        postImage: './images/scorpio-club-promo-2.png',
+        postDescription: 'In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.',
+        imageDirection: 'right',
+      },
+      {
+        id: 3,
+        postTitle: 'The Problem Solver3',
+        postImage: './images/scorpio-club-promo-3.png',
+        postDescription: 'In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.',
+        imageDirection: 'left',
+      },
+      {
+        id: 4,
+        postTitle: 'The Problem Solver4',
+        postImage: './images/scorpio-club-promo-4.png',
+        postDescription: 'In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.',
+        imageDirection: 'right',
+      }
+    ]
   },
   {
     id: Math.random(),
@@ -137,3 +170,5 @@ export const appData = [
     sectionButtonText: 'submit'
   }
 ]
+
+export default appData;

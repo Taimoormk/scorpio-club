@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -13,21 +13,30 @@ import SomeNotableScorpios from './SomeNotableScorpios';
 import BecomeOneOfUs from './BecomeOneOfUs';
 import LetsBeInTouch from './LetsBeInTouch';
 import Footer from './Footer';
+import appData from './appData';
 
 class App extends Component {
 
-  constructor() {
-    super();
+  componentDidMount() {
+    
   }
 
   render() {
     return (
       <div className="app">
         <Hero />
-        <Promo />
-        <Promo />
-        <Promo />
-        <Promo />
+        <Promo 
+          promoData={appData[1].promoPosts[0]}
+        />
+        <Promo 
+          promoData={appData[1].promoPosts[1]}
+        />
+        <Promo 
+          promoData={appData[1].promoPosts[2]}
+        />
+        <Promo 
+          promoData={appData[1].promoPosts[3]}
+        />
         <FromOurScropios />
         <SomeNotableScorpios />
         <BecomeOneOfUs />
