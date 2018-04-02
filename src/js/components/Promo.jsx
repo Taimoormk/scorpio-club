@@ -22,7 +22,7 @@ class Promo extends Component {
           <div className="promo-content-container">
             <div className="promo-image-container">
               <div className="promo-image">
-                <img src={promoData.postImage} width="250px" alt="Scorpio Club Promo" />
+                <img src={promoData.postImage} width="600px" alt="Scorpio Club Promo" />
               </div>
             </div>
             <div className="promo-text-container">

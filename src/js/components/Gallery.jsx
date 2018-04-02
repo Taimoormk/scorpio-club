@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import { shape, string } from 'prop-types';
+import { arrayOf, shape, string } from 'prop-types';
 
 // ########## Import Containers Here ##########
 
@@ -55,7 +55,7 @@ class Gallery extends Component {
     return(
       <div id="gallery">
         {
-          sectionTitle === 'From Our Scorpios' && this.fromOurScorpiosRender() 
+          sectionTitle === "From Our Scorpios" && this.fromOurScorpiosRender() 
           || 
           sectionTitle === "Some Notable Scorpios" && this.someNotableScorpiosRender() 
         }
@@ -66,12 +66,21 @@ class Gallery extends Component {
 
 Gallery.propTypes = {
   sectionTitle: string.isRequired,
-  fromOurScorpiosData: shape({
-    postImg: string.isRequired,
-  }).isRequired,
-  someNotableScorpiosData: shape({
-    postImg: string.isRequired,
-  }).isRequired,
+  fromOurScorpiosData: arrayOf(
+    shape({
+      postImg: string,
+    })
+  ),
+  someNotableScorpiosData: arrayOf(
+    shape({
+      postImg: string,
+    })
+  ),
+}
+
+Gallery.defaultProps = {
+  fromOurScorpiosData: null,
+  someNotableScorpiosData: null
 }
 
 export default Gallery;
