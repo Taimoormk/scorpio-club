@@ -14,15 +14,16 @@ class Hero extends Component {
   }
 
   render() {
+    const { heroData } = this.props;
     return (
       <section id="hero">
         <div className="wrapper">
           <div className="hero-content-container">
             <img className="hero-logo" src="./images/scorpio-club-white.png" alt="Scorpio Club Logo" />
-            <h1 className="hero-heading">Scorpio Club</h1>
-            <h3 className="hero-subheading">Scorpio is the best sign ever!</h3>
-            <h4 className="hero-text">Join us to know all the reasons WHY!</h4>
-            <button className="hero-button">Let Me In</button>
+            <h1 className="hero-heading">{heroData.sectionHeading}</h1>
+            <h3 className="hero-subheading">{heroData.sectionH3}</h3>
+            <h4 className="hero-text">{heroData.sectionH4}</h4>
+            <button className="hero-button">{heroData.sectionButtonText}</button>
           </div>
         </div>
       </section>

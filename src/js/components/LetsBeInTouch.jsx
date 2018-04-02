@@ -14,11 +14,12 @@ class LetsBeInTouch extends Component {
   }
 
   render() {
+    const { letsBeInTouch } = this.props;
     return (
       <section id="lets-be-in-touch">
         <div className="wrapper">
-          <h3 className="lets-be-in-touch-heading">Lets be in Touch</h3>
-          <h4 className="lets-be-in-touch-subheading">Society excited by cottage private an it esteems. Fully begin on by wound an. <br />Girl rich in do up or both. At declared in as rejoiced of together.</h4>
+          <h3 className="lets-be-in-touch-heading">{letsBeInTouch.sectionHeading}</h3>
+          <h4 className="lets-be-in-touch-subheading">{letsBeInTouch.sectionH3}</h4>
           <form className="lets-be-in-touch-form" action="">
             <input className="lets-be-in-touch-input" type="text" placeholder="Name" name="name" />
             <input className="lets-be-in-touch-input" type="email" placeholder="Email" name="email" />            

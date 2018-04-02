@@ -14,12 +14,13 @@ class Footer extends Component {
   }
 
   render() {
+    const { footer } = this.props;
     return (
       <section id="footer">
         <div className="wrapper">
           <div className="footer-container-left">
-            <p className="footer-heading">Scorpio Club</p>
-            <p className="footer-disclaimer">© 2018 Scorpio Club | All rights reserved.</p>
+            <p className="footer-heading">{footer.sectionHeading}</p>
+            <p className="footer-disclaimer">{footer.sectionPara}</p>
           </div>
           <div className="footer-container-right">
             <p className="footer-heading" />
