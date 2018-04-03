@@ -1,38 +1,30 @@
 // ########## Import Dependencies Here ##########
-import React, { Component } from 'react';
+import React from 'react';
 import { shape, string } from 'prop-types';
-import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
 import Gallery from './Gallery';
 
-class FromOurScorpios extends Component {
-
-  componentDidMount() {
-
-  }
-
-  render() {
-    const { fromOurScorpios } = this.props;
-    return (
-      <section id="from-our-scorpios">
-        <div className="wrapper">
-          <h3 className="from-our-scorpios-heading">{fromOurScorpios.sectionHeading}</h3>
-          <h4 className="from-our-scorpios-subheading">{fromOurScorpios.sectionH3}</h4>
-          <div className="from-our-scorpios-collection-container">
-            <Gallery
-              sectionTitle={fromOurScorpios.sectionTitle}
-              fromOurScorpiosData={fromOurScorpios.fromOurScorpiosData}
-            />
-            <button className="from-our-scorpios-button">{fromOurScorpios.sectionButtonText}</button>
-            <div className="filler" />
-          </div>
+const FromOurScorpios = (props) => {
+  const { fromOurScorpios } = props;
+  return (
+    <section id="from-our-scorpios">
+      <div className="wrapper">
+        <h3 className="from-our-scorpios-heading">{fromOurScorpios.sectionHeading}</h3>
+        <h4 className="from-our-scorpios-subheading">{fromOurScorpios.sectionH3}</h4>
+        <div className="from-our-scorpios-collection-container">
+          <Gallery
+            sectionTitle={fromOurScorpios.sectionTitle}
+            fromOurScorpiosData={fromOurScorpios.fromOurScorpiosData}
+          />
+          <button className="from-our-scorpios-button">{fromOurScorpios.sectionButtonText}</button>
+          <div className="filler" />
         </div>
-      </section>
-    );
-  }
+      </div>
+    </section>
+  );
 }
 
 FromOurScorpios.propTypes = {
@@ -49,4 +41,4 @@ FromOurScorpios.propTypes = {
 //   };
 // };
 
-export default connect(null, {})(FromOurScorpios);
+export default FromOurScorpios;

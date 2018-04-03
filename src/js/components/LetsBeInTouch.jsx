@@ -1,20 +1,13 @@
 // ########## Import Dependencies Here ##########
-import React, { Component } from 'react';
+import React from 'react';
 import { shape, string } from 'prop-types';
-import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
 
-class LetsBeInTouch extends Component {
-
-  componentDidMount() {
-    
-  }
-
-  render() {
-    const { letsBeInTouch } = this.props;
+const LetsBeInTouch = (props) => {
+    const { letsBeInTouch } = props;
     return (
       <section id="lets-be-in-touch">
         <div className="wrapper">
@@ -30,7 +23,6 @@ class LetsBeInTouch extends Component {
       </section>
     );
   }
-}
 
 LetsBeInTouch.propTypes = {
   letsBeInTouch: shape({
@@ -39,10 +31,4 @@ LetsBeInTouch.propTypes = {
   }).isRequired,
 }
 
-// function mapStateToProps(state) {
-//   return {
-//     key: null
-//   };
-// };
-
-export default connect(null, {})(LetsBeInTouch);
+export default LetsBeInTouch;
