@@ -8,6 +8,8 @@
       @include H3(center, $primary-color);
     }
     .become-one-of-us-subheading {
+      display: flex;
+      justify-content: center;
       @include H4(center, $primary-color);
       padding-top: 30px;
     }

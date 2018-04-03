@@ -8,6 +8,8 @@
       @include H3(center, $white);
     }
     .some-notable-scorpios-subheading {
+      display: flex;
+      justify-content: center;
       @include H4(center, $white);
     }
     .some-notable-scorpios-collection-container {

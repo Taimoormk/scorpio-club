@@ -1,6 +1,7 @@
 // ########## Import Dependencies Here ##########
 import React from 'react';
 import { shape, string } from 'prop-types';
+import Typed from 'react-typed';
 
 // ########## Import Containers Here ##########
 
@@ -13,7 +14,14 @@ const SomeNotableScorpios = (props) => {
     <section id="some-notable-scorpios">
       <div className="wrapper">
         <h3 className="some-notable-scorpios-heading">{someNotableScorpios.sectionHeading}</h3>
-        <h4 className="some-notable-scorpios-subheading">{someNotableScorpios.sectionH3}</h4>
+        {/* <h4 className="some-notable-scorpios-subheading">{someNotableScorpios.sectionH3}</h4> */}
+        <Typed
+          className="some-notable-scorpios-subheading"
+          strings={[someNotableScorpios.sectionLine1, someNotableScorpios.sectionLine2]}
+          typeSpeed={40}
+          backSpeed={50}
+          loop
+        />
         <div className="some-notable-scorpios-collection-container">
           <Gallery
             sectionTitle={someNotableScorpios.sectionTitle}
@@ -30,7 +38,8 @@ const SomeNotableScorpios = (props) => {
 SomeNotableScorpios.propTypes = {
   someNotableScorpios: shape({
     sectionHeading: string.isRequired,
-    sectionH3: string.isRequired,
+    sectionLine1: string.isRequired,
+    sectionLine2: string.isRequired,
     sectionButtonText: string.isRequired,
   }).isRequired,
 }

@@ -16,6 +16,9 @@
       }
       .hero-subheading {
         @include H3(center, $white);
+        display: flex;
+        justify-content: center;
+        // flex-direction: column;
       }
       .hero-text {
         @include H4(center, $white);

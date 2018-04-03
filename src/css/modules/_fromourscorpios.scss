@@ -8,6 +8,9 @@
       @include H3(center, $white);
     }
     .from-our-scorpios-subheading {
+      display: flex;
+      justify-content: center;
+      // flex-direction: column;
       @include H4(center, $white);
     }
     .from-our-scorpios-collection-container {

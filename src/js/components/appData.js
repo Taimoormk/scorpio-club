@@ -44,8 +44,8 @@ const appData = [
     id: Math.random(),
     sectionTitle: 'From Our Scorpios',
     sectionHeading: 'From Our Scorpios',
-    sectionH3: 'With our drag and drop system you can create pages in minutes!',
-    sectionH4: '',
+    sectionLine1: 'With our drag and drop system you can create pages in minutes!',
+    sectionLine2: 'Another line lets see how it looks like',
     sectionButtonText: 'see more',
     fromOurScorpiosData: [
       {
@@ -96,8 +96,8 @@ const appData = [
     id: Math.random(),
     sectionTitle: 'Some Notable Scorpios',
     sectionHeading: 'Some Notable Scorpios',
-    sectionH3: 'With our drag and drop system you can create pages in minutes!',
-    sectionH4: '',
+    sectionLine1: 'With our drag and drop system you can create pages in minutes!',
+    sectionLine2: 'Another line lets see how it looks like',
     sectionButtonText: 'see more',
     someNotableScorpiosData: [
       {
@@ -148,16 +148,16 @@ const appData = [
     id: Math.random(),
     sectionTitle: 'Become One Of Us',
     sectionHeading: 'Become One Of Us',
-    sectionH3: 'Society excited by cottage private an it esteems. Fully begin on by wound an. Girl rich in do up or both. At declared in as rejoiced of together.',
-    sectionH4: '',
+    sectionLine1: 'Society excited by cottage private an it esteems. Fully begin on by wound an.',
+    sectionLine2: 'Girl rich in do up or both. At declared in as rejoiced of together.',
     sectionButtonText: 'see more'
   },
   {
     id: Math.random(),
     sectionTitle: 'Lets be in Touch',
     sectionHeading: 'Lets be in Touch',
-    sectionH3: 'Society excited by cottage private an it esteems. Fully begin on by wound an. Girl rich in do up or both. At declared in as rejoiced of together.',
-    sectionH4: '',
+    sectionLine1: 'Society excited by cottage private an it esteems. Fully begin on by wound an.',
+    sectionLine2: 'Girl rich in do up or both. At declared in as rejoiced of together.',
     sectionButtonText: 'submit'
   },
   {

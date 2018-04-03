@@ -8,6 +8,8 @@
       @include H3(center, $accent-color);
     }
     .lets-be-in-touch-subheading {
+      display: flex;
+      justify-content: center;
       @include H4(center, $accent-color);
       padding-top: 30px;
     }
