@@ -13,7 +13,7 @@
     }
     .lets-be-in-touch-form {
       padding-top: 30px;
-      width: 40%;
+      width: 41%;
       margin: 0px auto;
       .lets-be-in-touch-input {
         width: 200px;
@@ -21,6 +21,7 @@
         font-size: 16px;
         font-family: $font-family;
         text-align: center;
+        margin-right: 10px;
       }
       .lets-be-in-touch-button {
         @include lets-be-in-touch-button($black, $accent-color);

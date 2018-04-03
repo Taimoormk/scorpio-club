@@ -3,8 +3,8 @@ const appData = [
     id: Math.random(),
     sectionTitle: 'Scorpio Club',
     sectionHeading: 'Scorpio Club',
-    sectionH3: 'Scorpio is the best sign ever!',
-    sectionH4: 'Join us to know all the reasons WHY!',
+    sectionLine1: 'Scorpio is the best sign ever!',
+    sectionLine2: 'Join us to know all the reasons WHY!',
     sectionButtonText: 'let me in'
   },
   {
