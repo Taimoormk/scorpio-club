@@ -7,7 +7,6 @@ import { connect } from 'react-redux'
 
 // ########## Import Components Here ##########
 import Gallery from './Gallery';
-import appData from './appData';
 
 class SomeNotableScorpios extends Component {
 
@@ -23,10 +22,10 @@ class SomeNotableScorpios extends Component {
           <h4 className="some-notable-scorpios-subheading">{someNotableScorpios.sectionH3}</h4>
           <div className="some-notable-scorpios-collection-container">
             <Gallery
-              sectionTitle={appData[3].sectionTitle}
-              someNotableScorpiosData={appData[3].someNotableScorpiosData}
+              sectionTitle={someNotableScorpios.sectionTitle}
+              someNotableScorpiosData={someNotableScorpios.someNotableScorpiosData}
             />
-            <button className="some-notable-scorpios-button">See More</button>
+            <button className="some-notable-scorpios-button">{someNotableScorpios.sectionButtonText}</button>
             <div className="filler" />
           </div>
         </div>
@@ -39,6 +38,7 @@ SomeNotableScorpios.propTypes = {
   someNotableScorpios: shape({
     sectionHeading: string.isRequired,
     sectionH3: string.isRequired,
+    sectionButtonText: string.isRequired,
   }).isRequired,
 }
 

@@ -77,6 +77,10 @@ App.propTypes = {
   ).isRequired,
 }
 
+App.defaultProp = {
+  initialLoadData: null
+}
+
 function mapStateToProps({initialLoadReducer}) {
   return {
     initialLoadData: initialLoadReducer
