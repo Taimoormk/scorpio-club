@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -32,6 +32,12 @@ class Hero extends Component {
 }
 
 Hero.propTypes = {
+  heroData: shape({
+    sectionHeading: string.isRequired,
+    sectionH3: string.isRequired,
+    sectionH4: string.isRequired,
+    sectionButtonText: string.isRequired,
+  }).isRequired,
 }
 
 // function mapStateToProps(state) {

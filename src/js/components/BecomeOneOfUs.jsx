@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -29,6 +29,11 @@ class BecomeOneOfUs extends Component {
 }
 
 BecomeOneOfUs.propTypes = {
+  becomeOneOfUs: shape({
+    sectionHeading: string.isRequired,
+    sectionH3: string.isRequired,
+    sectionButtonText: string.isRequired,
+  }).isRequired,
 }
 
 // function mapStateToProps(state) {

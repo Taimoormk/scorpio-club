@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -12,15 +12,15 @@ import appData from './appData';
 class SomeNotableScorpios extends Component {
 
   componentDidMount() {
-
   }
 
   render() {
+    const { someNotableScorpios } = this.props;
     return (
       <section id="some-notable-scorpios">
         <div className="wrapper">
-          <h3 className="some-notable-scorpios-heading">Some Notable Scorpios</h3>
-          <h4 className="some-notable-scorpios-subheading">With our drag and drop system you can create pages in minutes!</h4>
+          <h3 className="some-notable-scorpios-heading">{someNotableScorpios.sectionHeading}</h3>
+          <h4 className="some-notable-scorpios-subheading">{someNotableScorpios.sectionH3}</h4>
           <div className="some-notable-scorpios-collection-container">
             <Gallery
               sectionTitle={appData[3].sectionTitle}
@@ -36,6 +36,10 @@ class SomeNotableScorpios extends Component {
 }
 
 SomeNotableScorpios.propTypes = {
+  someNotableScorpios: shape({
+    sectionHeading: string.isRequired,
+    sectionH3: string.isRequired,
+  }).isRequired,
 }
 
 // function mapStateToProps(state) {

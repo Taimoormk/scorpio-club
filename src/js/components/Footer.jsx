@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -38,6 +38,10 @@ class Footer extends Component {
 }
 
 Footer.propTypes = {
+  footer: shape({
+    sectionHeading: string.isRequired,
+    sectionPara: string.isRequired,
+  }).isRequired,
 }
 
 // function mapStateToProps(state) {

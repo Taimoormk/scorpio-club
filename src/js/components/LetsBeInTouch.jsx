@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { shape, string } from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -32,8 +32,12 @@ class LetsBeInTouch extends Component {
   }
 }
 
-// LetsBeInTouch.propTypes = {
-// }
+LetsBeInTouch.propTypes = {
+  letsBeInTouch: shape({
+    sectionHeading: string.isRequired,
+    sectionH3: string.isRequired,
+  }).isRequired,
+}
 
 // function mapStateToProps(state) {
 //   return {

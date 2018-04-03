@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-// import PropTypes from 'prop-types';
+import { arrayOf, shape } from 'prop-types';
 import { connect } from 'react-redux'
 
 // ########## Import Containers Here ##########
@@ -59,6 +59,22 @@ class App extends Component {
 }
 
 App.propTypes = {
+  initialLoadData: arrayOf(
+    shape({
+      promoPosts: arrayOf(
+      ).isRequired,
+      fromOurScorpios: shape(
+      ).isRequired,
+      someNotableScorpios: shape(
+      ).isRequired,
+      becomeOneOfUs: shape(
+      ).isRequired,
+      letsBeInTouch: shape(
+      ).isRequired,
+      footer: shape(
+      ).isRequired,
+    }).isRequired,
+  ).isRequired,
 }
 
 function mapStateToProps({initialLoadReducer}) {
