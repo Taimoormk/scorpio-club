@@ -21,7 +21,7 @@ class SignInModal extends Component {
           <div className="signin-modal">
             <div className="signin-modal-body">
               <img className="signin-modal-left-background" src="./images/signin-modal-left-background.png" alt="Signin Modal left background"></img>
-              <img src="./images/signin-modal-left-character.png" alt="Signin Modal left character" />
+              <img className="signin-modal-left-character" src="./images/signin-modal-left-character.png" alt="Signin Modal left character" />
             </div>
             {/* <footer className="modal-footer"> */}
               {/* <button id="demo-one-deactivate" onClick={() => deactivateModalAction()}>
