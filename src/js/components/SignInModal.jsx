@@ -22,6 +22,7 @@ class SignInModal extends Component {
             <div className="signin-modal-body">
               <img className="signin-modal-left-background" src="./images/signin-modal-left-background.png" alt="Signin Modal left background" />
               <img className="signin-modal-left-character" src="./images/signin-modal-left-character.png" alt="Signin Modal left character" />
+              <div className="signin-modal-right-heading">Login with Facebook or Google</div>
               <div className="signin-modal-right-login">
                 <img className="facebook-login-button" src="./images/facebook-login-button.png" alt="Facebook login button" />
                 <img className="google-login-button" src="./images/google-login-button.png" alt="Google login button" />                
