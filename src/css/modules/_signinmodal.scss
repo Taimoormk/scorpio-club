@@ -20,5 +20,26 @@
       top: 56.5px;
       bottom: 56.6px;
     }
+    .signin-modal-right-login {
+      position: absolute;
+      right: 42px;
+      top: 165px;
+      bottom: 165px;
+      width: 250px;
+      height: 120px;
+      background-color: $white;
+      .facebook-login-button {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-top: 20px;
+        cursor: pointer;
+      }
+      .google-login-button {
+        margin-left: 25px;
+        margin-right: 25px;
+        margin-bottom: 20px;
+        cursor: pointer;
+      }
+    }
   }
 }
