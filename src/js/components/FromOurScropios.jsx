@@ -9,12 +9,11 @@ import Typed from 'react-typed';
 import Gallery from './Gallery';
 
 const FromOurScorpios = (props) => {
-  const { fromOurScorpios } = props;
+  const { fromOurScorpios, activateModalAction } = props;
   return (
     <section id="from-our-scorpios">
       <div className="wrapper">
         <h3 className="from-our-scorpios-heading">{fromOurScorpios.sectionHeading}</h3>
-        {/* <h4 className="from-our-scorpios-subheading">{fromOurScorpios.sectionH3}</h4> */}
         <Typed
           className="from-our-scorpios-subheading"
           strings={[fromOurScorpios.sectionLine1, fromOurScorpios.sectionLine2]}
@@ -27,7 +26,12 @@ const FromOurScorpios = (props) => {
             sectionTitle={fromOurScorpios.sectionTitle}
             fromOurScorpiosData={fromOurScorpios.fromOurScorpiosData}
           />
-          <button className="from-our-scorpios-button">{fromOurScorpios.sectionButtonText}</button>
+          <button 
+            className="from-our-scorpios-button"
+            onClick={() => activateModalAction()}
+          >
+            {fromOurScorpios.sectionButtonText}
+          </button>
           <div className="filler" />
         </div>
       </div>

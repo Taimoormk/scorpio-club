@@ -54,9 +54,11 @@ class App extends Component {
         />
         <FromOurScropios
           fromOurScorpios={initialLoadData[2]}
+          activateModalAction={activateModalAction}
         />
         <SomeNotableScorpios
           someNotableScorpios={initialLoadData[3]}
+          activateModalAction={activateModalAction}
         />
         <BecomeOneOfUs
           becomeOneOfUs={initialLoadData[4]}

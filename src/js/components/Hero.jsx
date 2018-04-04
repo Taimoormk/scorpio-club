@@ -15,8 +15,6 @@ const Hero = (props) => {
         <div className="hero-content-container">
           <img className="hero-logo" src="./images/scorpio-club-white.png" alt="Scorpio Club Logo" />
           <h1 className="hero-heading">{heroData.sectionHeading}</h1>
-          {/* <h3 className="hero-subheading">{heroData.sectionH3}</h3>
-          <h4 className="hero-text">{heroData.sectionH4}</h4> */}
           <Typed
             className="hero-subheading"
             strings={[heroData.sectionLine1, heroData.sectionLine2]}

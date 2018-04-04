@@ -9,7 +9,7 @@ import Typed from 'react-typed';
 import Gallery from './Gallery';
 
 const SomeNotableScorpios = (props) => {
-  const { someNotableScorpios } = props;
+  const { someNotableScorpios, activateModalAction } = props;
   return (
     <section id="some-notable-scorpios">
       <div className="wrapper">
@@ -27,7 +27,12 @@ const SomeNotableScorpios = (props) => {
             sectionTitle={someNotableScorpios.sectionTitle}
             someNotableScorpiosData={someNotableScorpios.someNotableScorpiosData}
           />
-          <button className="some-notable-scorpios-button">{someNotableScorpios.sectionButtonText}</button>
+          <button
+            className="some-notable-scorpios-button"
+            onClick={() => activateModalAction()}
+          >
+            {someNotableScorpios.sectionButtonText}
+          </button>
           <div className="filler" />
         </div>
       </div>
