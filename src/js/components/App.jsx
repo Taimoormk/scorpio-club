@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import { arrayOf, shape } from 'prop-types';
+import { arrayOf, shape, func, bool } from 'prop-types';
 import { connect } from 'react-redux';
 
 // ########## Import Containers Here ##########
@@ -91,6 +91,11 @@ App.propTypes = {
       ).isRequired,
     }).isRequired,
   ).isRequired,
+  activateModalAction: func.isRequired,
+  deactivateModalAction: func.isRequired,
+  toggleModal: shape({
+    modalActive: bool.isRequired
+  }).isRequired,
 }
 
 App.defaultProp = {

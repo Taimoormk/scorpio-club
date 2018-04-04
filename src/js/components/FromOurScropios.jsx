@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React from 'react';
-import { shape, string } from 'prop-types';
+import { shape, string, func } from 'prop-types';
 import Typed from 'react-typed';
 
 // ########## Import Containers Here ##########
@@ -46,6 +46,7 @@ FromOurScorpios.propTypes = {
     sectionLine2: string.isRequired,
     sectionButtonText: string.isRequired,
   }).isRequired,
+  activateModalAction: func.isRequired,
 }
 
 export default FromOurScorpios;

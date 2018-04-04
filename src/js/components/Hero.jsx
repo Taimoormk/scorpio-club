@@ -42,7 +42,6 @@ Hero.propTypes = {
     sectionButtonText: string.isRequired,
   }).isRequired,
   activateModalAction: func.isRequired,
-  deactivateModalAction: func.isRequired,
 }
 
 export default Hero;
