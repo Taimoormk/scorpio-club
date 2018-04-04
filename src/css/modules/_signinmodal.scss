@@ -1,0 +1,22 @@
+.signin-modal {
+  background-color: $accent-color;
+  border-radius: 7px;
+  width: 650px;
+  height: 450px;
+  padding: 75px;
+  .signin-modal-body {
+    background-color: $primary-color;
+    border-radius: 7px;
+    width: 650px;
+    height: 450px;
+    border: $white solid 1px;
+    position: relative;
+    .signin-modal-left-background {
+      position: relative;
+    }
+    .signin-modal-left-character {
+      position: absolute;
+      left: 0px;
+    }
+  }
+}

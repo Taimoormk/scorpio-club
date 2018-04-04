@@ -1,6 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React from 'react';
-import { shape, string } from 'prop-types';
+import { shape, string, func } from 'prop-types';
 import Typed from 'react-typed';
 
 // ########## Import Containers Here ##########
@@ -8,7 +8,7 @@ import Typed from 'react-typed';
 // ########## Import Components Here ##########
 
 const Hero = (props) => {
-  const { heroData } = props;
+  const { heroData, activateModalAction } = props;
   return (
     <section id="hero">
       <div className="wrapper">
@@ -24,7 +24,12 @@ const Hero = (props) => {
             backSpeed={50}
             loop
           />
-          <button className="hero-button">{heroData.sectionButtonText}</button>
+          <button
+            className="hero-button"
+            onClick={() => activateModalAction()}
+          >
+            {heroData.sectionButtonText}
+          </button>
         </div>
       </div>
     </section>
@@ -38,6 +43,8 @@ Hero.propTypes = {
     sectionLine2: string.isRequired,
     sectionButtonText: string.isRequired,
   }).isRequired,
+  activateModalAction: func.isRequired,
+  deactivateModalAction: func.isRequired,
 }
 
 export default Hero;

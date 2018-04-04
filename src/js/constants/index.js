@@ -1,1 +1,3 @@
-// export const FILL_ME = 'FILL_ME';
+export const OPEN_MODAL = 'OPEN_MODAL';
+export const CLOSE_MODAL = 'CLOSE_MODAL';
+export const GET_APPLICATION_NODE = 'GET_APPLICATION_NODE';
