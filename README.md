@@ -7,4 +7,4 @@ Scorpio Club website built on ReactJS
 <br />
 <p>Designed and Built by <a href="http/www.geekmarketers.xyz">GeekMarketers</a></p>
 <br />
-<img src="./src/screenshot/home.png" />
+<img src="./src/screenshot/home.jpg" />

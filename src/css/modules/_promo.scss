@@ -1,15 +1,15 @@
 #promo {
   width: 100%;
-  height: 500px;
   .wrapper {
     @include wrapper($wrapper-width);
     .promo-heading {
-      @include H3(center, $primary-color);
+      @include H3(center, $white);
     }
     .promo-content-container {
       width: 100%;
       height: 300px;
       margin-top: 60px;
+      padding-bottom: 60px;
       .promo-image-container-left {
         width: 50%;
         height: 300px;
@@ -33,7 +33,7 @@
         height: 300px;
         float: left;
         .promo-text {
-          @include H4(left, $black);
+          @include H4(left, $white);
           padding: 110px 150px;
         }
       }

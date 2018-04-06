@@ -40,6 +40,7 @@ class App extends Component {
           heroData={initialLoadData[0]}
           activateModalAction={activateModalAction}
         />
+        <div className="promo-gradient">
         <Promo
           promoData={initialLoadData[1].promoPosts[0]}
         />
@@ -52,6 +53,7 @@ class App extends Component {
         <Promo
           promoData={initialLoadData[1].promoPosts[3]}
         />
+        </div>
         <FromOurScropios
           fromOurScorpios={initialLoadData[2]}
           activateModalAction={activateModalAction}

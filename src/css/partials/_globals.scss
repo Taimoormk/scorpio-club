@@ -2,6 +2,11 @@ body {
   margin: 0px;
 }
 
+.promo-gradient {
+  background: rgb(83,71,65);
+  background: linear-gradient(180deg, rgba(83,71,65,1) 21%, rgba(253,186,38,1) 100%);
+}
+
 .clear {
   clear: both;
 }
