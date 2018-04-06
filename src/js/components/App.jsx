@@ -41,18 +41,18 @@ class App extends Component {
           activateModalAction={activateModalAction}
         />
         <div className="promo-gradient">
-        <Promo
-          promoData={initialLoadData[1].promoPosts[0]}
-        />
-        <Promo
-          promoData={initialLoadData[1].promoPosts[1]}
-        />
-        <Promo
-          promoData={initialLoadData[1].promoPosts[2]}
-        />
-        <Promo
-          promoData={initialLoadData[1].promoPosts[3]}
-        />
+          <Promo
+            promoData={initialLoadData[1].promoPosts[0]}
+          />
+          <Promo
+            promoData={initialLoadData[1].promoPosts[1]}
+          />
+          <Promo
+            promoData={initialLoadData[1].promoPosts[2]}
+          />
+          <Promo
+            promoData={initialLoadData[1].promoPosts[3]}
+          />
         </div>
         <FromOurScropios
           fromOurScorpios={initialLoadData[2]}
