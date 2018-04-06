@@ -1,3 +1,4 @@
+// ########## Import Constants Here ##########
 import { OPEN_MODAL, CLOSE_MODAL } from '../constants';
 
 export function activateModalAction(value) {
