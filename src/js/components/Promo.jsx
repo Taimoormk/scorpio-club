@@ -13,8 +13,8 @@ const Promo = (props) => {
       <div className="wrapper">
         <h3 className="promo-heading">{promoData.postTitle}</h3>
         <div className="promo-content-container">
-          <div className="promo-image-container">
-            <img className="promo-image" src={promoData.postImage} alt="Scorpio Club Promo" />
+          <div className={`promo-image-container-${promoData.imageDirection}`}>
+            <img className={`promo-image-${promoData.imageDirection}`} src={promoData.postImage} alt="Scorpio Club Promo" />
           </div>
           <div className="promo-text-container">
             <p className="promo-text">{promoData.postDescription}</p>

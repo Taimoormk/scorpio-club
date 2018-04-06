@@ -10,11 +10,20 @@
       width: 100%;
       height: 300px;
       margin-top: 60px;
-      .promo-image-container {
+      .promo-image-container-left {
         width: 50%;
         height: 300px;
         float: left;
-        .promo-image {
+        .promo-image-left {
+          width: 500px;
+          margin: 0px auto;
+        }
+      }
+      .promo-image-container-right {
+        width: 50%;
+        height: 300px;
+        float: right;
+        .promo-image-right {
           width: 500px;
           margin: 0px auto;
         }
