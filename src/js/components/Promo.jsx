@@ -14,9 +14,7 @@ const Promo = (props) => {
         <h3 className="promo-heading">{promoData.postTitle}</h3>
         <div className="promo-content-container">
           <div className="promo-image-container">
-            <div className="promo-image">
-              <img src={promoData.postImage} width="600px" alt="Scorpio Club Promo" />
-            </div>
+            <img className="promo-image" src={promoData.postImage} alt="Scorpio Club Promo" />
           </div>
           <div className="promo-text-container">
             <p className="promo-text">{promoData.postDescription}</p>

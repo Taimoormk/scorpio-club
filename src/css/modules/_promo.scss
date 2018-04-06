@@ -8,24 +8,24 @@
     }
     .promo-content-container {
       width: 100%;
-      height: 250px;
+      height: 300px;
       margin-top: 60px;
       .promo-image-container {
         width: 50%;
-        height: 250px;
+        height: 300px;
         float: left;
         .promo-image {
-          // @include promo-image('./images/scorpio-club-promo-1.png');
+          width: 500px;
           margin: 0px auto;
         }
       }
       .promo-text-container {
         width: 50%;
-        height: 250px;
+        height: 300px;
         float: left;
         .promo-text {
           @include H4(left, $black);
-          padding: 70px 150px;;
+          padding: 110px 150px;
         }
       }
     }
