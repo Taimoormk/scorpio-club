@@ -1,16 +1,16 @@
 // ########## Import Constants Here ##########
-import { OPEN_MODAL, CLOSE_MODAL } from '../constants';
+import * as types from '../constants';
 
 export function activateModalAction(value) {
   return {
-    type: OPEN_MODAL,
+    type: types.OPEN_MODAL,
     payload: value
   }
 }
 
 export function deactivateModalAction(value) {
   return {
-    type: CLOSE_MODAL,
+    type: types.CLOSE_MODAL,
     payload: value
   }
 }
