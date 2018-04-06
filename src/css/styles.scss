@@ -1,7 +1,9 @@
+// ########## Import Partials Here ##########
 @import './partials/globals';
 @import './partials/mixins';
 @import './partials/variables';
 
+// ########## Import Modules Here ##########
 @import './modules/app';
 @import './modules/hero';
 @import './modules/promo';
