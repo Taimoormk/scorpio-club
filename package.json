@@ -4,13 +4,19 @@
   "description": "Scorpio Club website built on ReactJS",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "dev": "webpack-dev-server --config webpack.config.dev.js",
     "prod": "webpack --config webpack.config.prod.js -p"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/Taimoormk/scorpio-club.git"
+  },
+  "jest": {
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "author": "Taimoor Khan",
   "license": "MIT",
@@ -19,7 +25,8 @@
   },
   "homepage": "https://github.com/Taimoormk/scorpio-club#readme",
   "dependencies": {
-    "bootstrap": "^3.3.7",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
     "gifshot": "^0.4.5",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
@@ -36,11 +43,13 @@
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.3",
     "babel-loader": "^7.1.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
     "babel-preset-stage-3": "^6.24.1",
     "css-loader": "^0.28.9",
+    "enzyme-to-json": "^3.3.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-config-prettier": "^2.9.0",
@@ -50,9 +59,12 @@
     "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^3.0.2",
     "glob-all": "^3.1.0",
+    "jest": "^22.4.3",
+    "jest-serializer-enzyme": "^1.0.0",
     "node-sass": "^4.7.2",
     "purify-css": "^1.2.5",
     "purifycss-webpack": "^0.7.0",
+    "react-test-renderer": "^16.3.1",
     "sass-loader": "^6.0.6",
     "style-loader": "^0.20.1",
     "webpack": "^3.10.0",

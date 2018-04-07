@@ -1,0 +1,109 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App Component renders 1`] = `
+<div
+  className="app"
+>
+  <Hero
+    activateModalAction={[MockFunction]}
+    heroData={
+      Object {
+        "sectionButtonText": "let me in",
+        "sectionHeading": "Scorpio Club",
+        "sectionLine1": "Scorpio is the best sign ever!",
+        "sectionLine2": "Join us to know all the reasons WHY!",
+      }
+    }
+  />
+  <div
+    className="promo-gradient"
+  >
+    <Promo
+      promoData={
+        Object {
+          "postDescription": "In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.",
+          "postImage": "./images/scorpio-club-promo-1.png",
+          "postTitle": "The Problem Solver1",
+        }
+      }
+    />
+    <Promo
+      promoData={
+        Object {
+          "postDescription": "In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.",
+          "postImage": "./images/scorpio-club-promo-1.png",
+          "postTitle": "The Problem Solver1",
+        }
+      }
+    />
+    <Promo
+      promoData={
+        Object {
+          "postDescription": "In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.",
+          "postImage": "./images/scorpio-club-promo-1.png",
+          "postTitle": "The Problem Solver1",
+        }
+      }
+    />
+    <Promo
+      promoData={
+        Object {
+          "postDescription": "In a fix or deep trouble? As a Scorpio for help! Yes, Scorpio have an uncanny ability to work out solutions from scratch.",
+          "postImage": "./images/scorpio-club-promo-1.png",
+          "postTitle": "The Problem Solver1",
+        }
+      }
+    />
+  </div>
+  <FromOurScorpios
+    activateModalAction={[MockFunction]}
+    fromOurScorpios={
+      Object {
+        "sectionButtonText": "see more",
+        "sectionHeading": "From Our Scorpios",
+        "sectionLine1": "With our drag and drop system you can create pages in minutes!",
+        "sectionLine2": "Another line lets see how it looks like",
+      }
+    }
+  />
+  <SomeNotableScorpios
+    activateModalAction={[MockFunction]}
+    someNotableScorpios={
+      Object {
+        "sectionButtonText": "see more",
+        "sectionHeading": "Some Notable Scorpios",
+        "sectionLine1": "With our drag and drop system you can create pages in minutes!",
+        "sectionLine2": "Another line lets see how it looks like",
+      }
+    }
+  />
+  <BecomeOneOfUs
+    becomeOneOfUs={
+      Object {
+        "sectionButtonText": "see more",
+        "sectionHeading": "Become One Of Us",
+        "sectionLine1": "Society excited by cottage private an it esteems. Fully begin on by wound an.",
+        "sectionLine2": "Girl rich in do up or both. At declared in as rejoiced of together.",
+      }
+    }
+  />
+  <LetsBeInTouch
+    letsBeInTouch={
+      Object {
+        "sectionButtonText": "see more",
+        "sectionHeading": "Lets be in Touch",
+        "sectionLine1": "Society excited by cottage private an it esteems. Fully begin on by wound an.",
+        "sectionLine2": "Girl rich in do up or both. At declared in as rejoiced of together.",
+      }
+    }
+  />
+  <Footer
+    footer={
+      Object {
+        "sectionHeading": "Scorpio Club",
+        "sectionPara": "© 2018 Scorpio Club | All rights reserved.",
+      }
+    }
+  />
+</div>
+`;
