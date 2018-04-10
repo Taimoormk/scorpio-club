@@ -9,11 +9,11 @@ import { arrayOf, shape, string } from 'prop-types';
 class Gallery extends Component {
 
   fromOurScorpiosonMouseEnterHandler() {
-    console.log('fromOurScorpiosonMouseEnterHandler');
+    // console.log('fromOurScorpiosonMouseEnterHandler');
   }
 
   fromOurScorpiosonMouseLeaveHandler() {
-    console.log('fromOurScorpiosonMouseLeaveHandler');
+    // console.log('fromOurScorpiosonMouseLeaveHandler');
   }
 
   fromOurScorpiosRender() {
@@ -40,11 +40,11 @@ class Gallery extends Component {
   }
 
   someNotableScorpiosonMouseEnterHandler() {
-    console.log('someNotableScorpiosonMouseEnterHandler');
+    // console.log('someNotableScorpiosonMouseEnterHandler');
   }
 
   someNotableScorpiosonMouseLeaveHandler() {
-    console.log('someNotableScorpiosonMouseLeaveHandler');
+    // console.log('someNotableScorpiosonMouseLeaveHandler');
   }
 
   someNotableScorpiosRender() {
