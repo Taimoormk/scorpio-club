@@ -8,6 +8,14 @@ import { arrayOf, shape, string } from 'prop-types';
 
 class Gallery extends Component {
 
+  fromOurScorpiosonMouseEnterHandler() {
+    console.log('fromOurScorpiosonMouseEnterHandler');
+  }
+
+  fromOurScorpiosonMouseLeaveHandler() {
+    console.log('fromOurScorpiosonMouseLeaveHandler');
+  }
+
   fromOurScorpiosRender() {
     const { fromOurScorpiosData } = this.props;
     return (
@@ -22,11 +30,21 @@ class Gallery extends Component {
               src={postImg}
               className="from-our-scorpios-gallery-item"
               alt="from our scorpios gallery item"
+              onMouseEnter={() => this.fromOurScorpiosonMouseEnterHandler()}
+              onMouseLeave={() => this.fromOurScorpiosonMouseLeaveHandler()}
             />
           </div>
         )
       })
     )
+  }
+
+  someNotableScorpiosonMouseEnterHandler() {
+    console.log('someNotableScorpiosonMouseEnterHandler');
+  }
+
+  someNotableScorpiosonMouseLeaveHandler() {
+    console.log('someNotableScorpiosonMouseLeaveHandler');
   }
 
   someNotableScorpiosRender() {
@@ -43,6 +61,8 @@ class Gallery extends Component {
               src={postImg}
               className="some-notable-scorpios-gallery-item"
               alt="some notable scorpios gallery item"
+              onMouseEnter={() => this.someNotableScorpiosonMouseEnterHandler()}
+              onMouseLeave={() => this.someNotableScorpiosonMouseLeaveHandler()}
             />
           </div>
         )
@@ -52,12 +72,12 @@ class Gallery extends Component {
 
   render() {
     const { sectionTitle } = this.props;
-    return(
+    return (
       <div id="gallery">
         {
-          sectionTitle === "From Our Scorpios" && this.fromOurScorpiosRender() 
-          || 
-          sectionTitle === "Some Notable Scorpios" && this.someNotableScorpiosRender() 
+          sectionTitle === "From Our Scorpios" && this.fromOurScorpiosRender()
+          ||
+          sectionTitle === "Some Notable Scorpios" && this.someNotableScorpiosRender()
         }
       </div>
     );
