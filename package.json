@@ -32,6 +32,7 @@
     "react": "^16.2.0",
     "react-aria-modal": "^2.12.1",
     "react-dom": "^16.2.0",
+    "react-particles-js": "^2.1.2",
     "react-redux": "^5.0.7",
     "react-simple-chatbot": "^0.2.9",
     "react-typed": "^1.0.8",

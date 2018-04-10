@@ -14,3 +14,17 @@ export function deactivateModalAction(value) {
     payload: value
   }
 }
+
+export function signInAction(value) {
+  return {
+    type: types.SIGN_IN,
+    payload: value
+  }
+}
+
+export function signOutAction(value) {
+  return {
+    type: types.SIGN_OUT,
+    payload: value
+  }
+}

@@ -1,14 +1,16 @@
 // ########## Import Dependencies Here ##########
 import React from 'react';
 import { func } from 'prop-types';
+import { connect } from 'react-redux';
 import AriaModal from 'react-aria-modal';
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
+import * as actions from '../actions';
 
 const SignInModal = (props) => {
-  const { deactivateModalAction } = props;
+  const { deactivateModalAction, signInAction, signOutAction } = props;
   return (
     <div id="signin-modal">
       <AriaModal
@@ -23,8 +25,18 @@ const SignInModal = (props) => {
             <img className="signin-modal-left-character" src="./images/signin-modal-left-character.png" alt="Signin Modal left character" />
             <div className="signin-modal-right-heading">Login with Facebook or Google</div>
             <div className="signin-modal-right-login">
-              <img className="facebook-login-button" src="./images/facebook-login-button.png" alt="Facebook login button" />
-              <img className="google-login-button" src="./images/google-login-button.png" alt="Google login button" />
+              <img
+                className="facebook-login-button"
+                src="./images/facebook-login-button.png"
+                alt="Facebook login button"
+                onClick={() => signInAction()}
+              />
+              <img
+                className="google-login-button"
+                src="./images/google-login-button.png"
+                alt="Google login button"
+                onClick={() => signInAction()}
+              />
             </div>
           </div>
           {/* <footer className="modal-footer"> */}
@@ -42,4 +54,13 @@ SignInModal.propTypes = {
   deactivateModalAction: func.isRequired,
 }
 
-export default SignInModal;
+function mapStateToProps({ signinsignoutReducer }) {
+  return {
+    isSignedIn: signinsignoutReducer
+  };
+};
+
+export default connect(mapStateToProps, {
+  signInAction: actions.signInAction,
+  signOutAction: actions.signOutAction,
+})(SignInModal);
