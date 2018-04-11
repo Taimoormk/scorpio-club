@@ -25,3 +25,49 @@
     }
   }
 }
+
+// Styles for tablet devices min width 768px max width 1023px
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  #some-notable-scorpios {
+    .wrapper {
+      .some-notable-scorpios-heading {
+        @include H3-tablet(center, $white);
+      }
+      .some-notable-scorpios-subheading {
+        @include H4-tablet(center, $white);
+      }
+      .some-notable-scorpios-collection-container {
+        .some-notable-scorpios-button {
+
+        }
+        .filler {
+          padding-bottom: 40px;
+        }
+      }
+    }
+  }
+}
+
+// Styles for mobile devices min width 320px max width 767px
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  #some-notable-scorpios {
+    .wrapper {
+      .some-notable-scorpios-heading {
+        @include H3-mobile(center, $white);
+      }
+      .some-notable-scorpios-subheading {
+        @include H4-mobile(center, $white);
+      }
+      .some-notable-scorpios-collection-container {
+        .some-notable-scorpios-button {
+
+        }
+        .filler {
+          padding-bottom: 30px;
+        }
+      }
+    }
+  }
+}
