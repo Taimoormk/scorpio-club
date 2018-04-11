@@ -7,12 +7,13 @@
     }
     .promo-content-container {
       width: 100%;
-      height: 300px;
+      // height: 300px;
       margin-top: 60px;
       padding-bottom: 60px;
       .promo-image-container-left {
-        width: 50%;
-        height: 300px;
+        width: 48%;
+        padding-right: 2%;
+        // height: 300px;
         float: left;
         .promo-image-left {
           width: 100%;
@@ -20,8 +21,9 @@
         }
       }
       .promo-image-container-right {
-        width: 50%;
-        height: 300px;
+        width: 48%;
+        padding-left: 2%;
+        // height: 300px;
         float: right;
         .promo-image-right {
           width: 100%;
@@ -30,11 +32,11 @@
       }
       .promo-text-container {
         width: 50%;
-        height: 300px;
+        // height: 300px;
         float: left;
         .promo-text {
           @include H4(left, $white);
-          padding: 110px 150px;
+          // padding: 110px 150px;
         }
       }
     }
@@ -50,26 +52,26 @@
         @include H3-tablet(center, $white);
       }
       .promo-content-container {
-        height: 250px;
+        // height: 250px;
         margin-top: 40px;
         padding-bottom: 40px;
         .promo-image-container-left {
-          height: 250px;
+          // height: 250px;
           .promo-image-left {
             width: 100%;
           }
         }
         .promo-image-container-right {
-          height: 250px;
+          // height: 250px;
           .promo-image-right {
             width: 100%
           }
         }
         .promo-text-container {
-          height: 250px;
+          // height: 250px;
           .promo-text {
             @include H4-tablet(left, $white);
-            padding: 75px 75px;
+            // padding: 75px 75px;
           }
         }
       }
@@ -80,5 +82,35 @@
 // Styles for mobile devices min width 320px max width 767px
 
 @media only screen and (max-width: 767px) and (min-width: 320px) {
-
+  #promo {
+    .wrapper {
+      .promo-heading {
+        @include H3-mobile(center, $white);
+      }
+      .promo-content-container {
+        // height: 200px;
+        margin-top: 30px;
+        padding-bottom: 30px;
+        .promo-image-container-left {
+          // height: 200px;
+          .promo-image-left {
+            width: 100%;
+          }
+        }
+        .promo-image-container-right {
+          // height: 200px;
+          .promo-image-right {
+            width: 100%
+          }
+        }
+        .promo-text-container {
+          // height: 200px;
+          .promo-text {
+            @include H4-mobile(left, $white);
+            // padding: 50px 50px;
+          }
+        }
+      }
+    }
+  }
 }
