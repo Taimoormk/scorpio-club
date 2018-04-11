@@ -15,7 +15,7 @@
     }
     .lets-be-in-touch-form {
       padding-top: 30px;
-      width: 41%;
+      width: 80%;
       margin: 0px auto;
       .lets-be-in-touch-input {
         width: 200px;
@@ -31,6 +31,61 @@
     }
     .filler {
       padding-bottom: 60px;
+    }
+  }
+}
+
+// Styles for tablet devices min width 768px max width 1023px
+
+@media only screen and (max-width: 1023px) and (min-width: 768px) {
+  #lets-be-in-touch {
+    .wrapper {
+      .lets-be-in-touch-heading {
+        @include H3-tablet(center, $accent-color);
+      }
+      .lets-be-in-touch-subheading {
+        @include H4-tablet(center, $accent-color);
+      }
+      .lets-be-in-touch-form {
+        width: 100%;
+       .lets-be-in-touch-input {
+         width: 100px;
+         height: 25px;
+       }
+       .lets-be-in-touch-button {
+        @include lets-be-in-touch-button-tablet($black, $accent-color);
+       }
+      }
+      .filler {
+        padding-bottom: 40px;
+      }
+    }
+  }
+}
+
+// Styles for mobile devices min width 320px max width 767px
+
+@media only screen and (max-width: 767px) and (min-width: 320px) {
+  #lets-be-in-touch {
+    .wrapper {
+      .lets-be-in-touch-heading {
+        @include H3-mobile(center, $accent-color);
+      }
+      .lets-be-in-touch-subheading {
+        @include H4-mobile(center, $accent-color);
+      }
+      .lets-be-in-touch-form {
+       .lets-be-in-touch-input {
+        width: 70px;
+        height: 25px;
+       }
+       .lets-be-in-touch-button {
+        @include lets-be-in-touch-button-mobile($black, $accent-color);
+       }
+      }
+      .filler {
+        padding-bottom: 30px;
+      }
     }
   }
 }
