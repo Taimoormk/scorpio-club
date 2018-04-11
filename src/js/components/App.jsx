@@ -54,6 +54,7 @@ export const App = (props) => {
         <Promo
           promoData={initialLoadData[1].promoPosts[3]}
         />
+        <div className="filler" />
       </div>
       <FromOurScropios
         fromOurScorpios={initialLoadData[2]}
