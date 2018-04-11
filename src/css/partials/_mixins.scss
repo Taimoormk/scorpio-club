@@ -49,6 +49,28 @@
   letter-spacing: 0.05em;
 }
 
+@mixin H1-tablet($t-a, $c) {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 30px;
+  margin: 0px;
+  padding-top: 60px;
+  text-align: $t-a;
+  color: $c;
+  letter-spacing: 0.05em;
+}
+
+@mixin H1-mobile($t-a, $c) {
+  font-family: $font-family;
+  font-weight: 700;
+  font-size: 24px;
+  margin: 0px;
+  padding-top: 60px;
+  text-align: $t-a;
+  color: $c;
+  letter-spacing: 0.05em;
+}
+
 @mixin H2($t-a, $c) {
   font-family: $font-family;
   font-weight: 700;

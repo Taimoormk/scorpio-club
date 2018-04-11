@@ -3,7 +3,7 @@
   height: 100vh;
   background: $background-image-color url('./images/hero.jpg') no-repeat center;
   background-size: cover;
-  .wrapper{
+  .wrapper {
     @include wrapper($wrapper-width);
     padding-top: calc((100vh - 600px)/2);
     .hero-content-container {
@@ -33,11 +33,51 @@
 // Styles for tablet devices min width 768px max width 1023px
 
 @media only screen and (max-width: 1023px) and (min-width: 768px) {
+  #hero {
+    .wrapper {
+      .hero-content-container {
+        .hero-logo {
+        }
+        .hero-heading {
+          @include H1-tablet(center, $white);
+        }
+        .hero-subheading {
+          @include H3-tablet(center, $white);
+        }
+        .hero-text {
+          @include H4-tablet(center, $white);
+        }
+        .hero-button {
 
+        }
+      }
+    }
+  }
 }
 
 // Styles for mobile devices min width 320px max width 767px
 
 @media only screen and (max-width: 767px) and (min-width: 320px) {
+  #hero {
+    .wrapper {
+      padding-top: calc((100vh - 500px)/2);
+      .hero-content-container {
+        .hero-logo {
+          width: 75%;
+        }
+        .hero-heading {
+          @include H1-mobile(center, $white);
+        }
+        .hero-subheading {
+          @include H3-mobile(center, $white);
+        }
+        .hero-text {
+          @include H4-mobile(center, $white);
+        }
+        .hero-button {
 
+        }
+      }
+    }
+  }
 }
