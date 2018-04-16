@@ -4,9 +4,11 @@
   background-color: $accent-color;
   .wrapper {
     @include wrapper($wrapper-width);
+    display: flex;
     .footer-container-left {
-      width: 50%;
-      float: left;
+      // width: 50%;
+      // float: left;
+      flex: 1 1 80%;
       .footer-heading {
         font-family: $font-family;
         font-size: 36px;
@@ -23,8 +25,9 @@
       }
     }
     .footer-container-right {
-      width: 50%;
-      float: left;
+      // width: 50%;
+      // float: left;
+      flex: 1 1 20%;
       .footer-heading {
         font-family: $font-family;
         font-size: 36px;
@@ -47,56 +50,56 @@
   }
 }
 
-// Styles for tablet devices min width 768px max width 1023px
+// // Styles for tablet devices min width 768px max width 1023px
 
-@media only screen and (max-width: 1023px) and (min-width: 768px) {
-  #footer {
-    .wrapper {
-      .footer-container-left {
-        .footer-heading {
+// @media only screen and (max-width: 1023px) and (min-width: 768px) {
+//   #footer {
+//     .wrapper {
+//       .footer-container-left {
+//         .footer-heading {
 
-        }
-        .footer-disclaimer {
+//         }
+//         .footer-disclaimer {
 
-        }
-      }
-      .footer-container-right {
-        .footer-heading {
+//         }
+//       }
+//       .footer-container-right {
+//         .footer-heading {
 
-        }
-        .footer-disclaimer {
-          .fab {
+//         }
+//         .footer-disclaimer {
+//           .fab {
 
-          }
-        }
-      }
-    }
-  }
-}
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
 
-// Styles for mobile devices min width 320px max width 767px
+// // Styles for mobile devices min width 320px max width 767px
 
-@media only screen and (max-width: 767px) and (min-width: 320px) {
-  #footer {
-    .wrapper {
-      .footer-container-left {
-        .footer-heading {
+// @media only screen and (max-width: 767px) and (min-width: 320px) {
+//   #footer {
+//     .wrapper {
+//       .footer-container-left {
+//         .footer-heading {
 
-        }
-        .footer-disclaimer {
+//         }
+//         .footer-disclaimer {
 
-        }
-      }
-      .footer-container-right {
-        .footer-heading {
+//         }
+//       }
+//       .footer-container-right {
+//         .footer-heading {
 
-        }
-        .footer-disclaimer {
-          .fab {
+//         }
+//         .footer-disclaimer {
+//           .fab {
 
-          }
-        }
-      }
-    }
-  }
-}
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

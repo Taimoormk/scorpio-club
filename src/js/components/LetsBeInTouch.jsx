@@ -13,7 +13,6 @@ const LetsBeInTouch = (props) => {
     <section id="lets-be-in-touch">
       <div className="wrapper">
         <h3 className="lets-be-in-touch-heading">{letsBeInTouch.sectionHeading}</h3>
-        {/* <h4 className="lets-be-in-touch-subheading">{letsBeInTouch.sectionH3}</h4> */}
         <Typed
           className="lets-be-in-touch-subheading"
           strings={[letsBeInTouch.sectionLine1, letsBeInTouch.sectionLine2]}

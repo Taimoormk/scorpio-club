@@ -14,16 +14,18 @@
       padding-top: 30px;
     }
     .lets-be-in-touch-form {
+      display: flex;
       padding-top: 30px;
-      width: 80%;
-      margin: 0px auto;
+      // width: 70%;
+      justify-content: center;
+      // margin: 0px auto;
       .lets-be-in-touch-input {
         width: 200px;
         height: 50px;
         font-size: 16px;
         font-family: $font-family;
         text-align: center;
-        margin-right: 10px;
+        margin-right: 20px;
       }
       .lets-be-in-touch-button {
         @include lets-be-in-touch-button($black, $accent-color);
