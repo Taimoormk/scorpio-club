@@ -8,6 +8,25 @@ import { arrayOf, shape, string } from 'prop-types';
 
 class Gallery extends Component {
 
+  static propTypes = {
+    sectionTitle: string.isRequired,
+    fromOurScorpiosData: arrayOf(
+      shape({
+        postImg: string,
+      })
+    ),
+    someNotableScorpiosData: arrayOf(
+      shape({
+        postImg: string,
+      })
+    ),
+  }
+
+  static defaultProps = {
+    fromOurScorpiosData: null,
+    someNotableScorpiosData: null
+  }
+
   fromOurScorpiosonMouseEnterHandler() {
     // console.log('fromOurScorpiosonMouseEnterHandler');
   }
@@ -82,25 +101,6 @@ class Gallery extends Component {
       </div>
     );
   }
-}
-
-Gallery.propTypes = {
-  sectionTitle: string.isRequired,
-  fromOurScorpiosData: arrayOf(
-    shape({
-      postImg: string,
-    })
-  ),
-  someNotableScorpiosData: arrayOf(
-    shape({
-      postImg: string,
-    })
-  ),
-}
-
-Gallery.defaultProps = {
-  fromOurScorpiosData: null,
-  someNotableScorpiosData: null
 }
 
 export default Gallery;
