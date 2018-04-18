@@ -1,16 +1,16 @@
 // ########## Import Dependencies Here ##########
-import { takeEvery, all } from 'redux-saga/effects';
+import { takeLatest, all } from 'redux-saga/effects';
 
 // ########## Import Components Here ##########
 import * as types from '../constants';
 
 // ########## Import Sagas Here ##########
-import demoSaga from './demoSaga';
+import loadAppSaga from './loadAppSaga';
 
-function* watchActivateModalAction() {
-  yield takeEvery(types.OPEN_MODAL, demoSaga);
+function* watchLoadAppAction() {
+  yield takeLatest(types.LOAD_APP, loadAppSaga);
 }
 
 export default function* rootSaga() {
-  yield all ([watchActivateModalAction()]);
+  yield all ([watchLoadAppAction()]);
 }

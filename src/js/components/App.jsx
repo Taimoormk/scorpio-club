@@ -1,5 +1,5 @@
 // ########## Import Dependencies Here ##########
-import React from 'react';
+import React, { Component } from 'react';
 import { arrayOf, shape, func, bool } from 'prop-types';
 import { connect } from 'react-redux';
 import {
@@ -22,59 +22,69 @@ import Footer from './Footer';
 import SignInModal from './SignInModal';
 import * as actions from '../actions';
 
-export const App = (props) => {
-  const {
-    initialLoadData,
-    activateModalAction,
-    deactivateModalAction,
-    toggleModal
-  } = props;
-  return (
-    <div className="app">
-      {
-        toggleModal.modalActive &&
-        <SignInModal
-          deactivateModalAction={deactivateModalAction}
+export class App extends Component {
+
+  constructor(props) {
+    super(props);
+    const { loadAppAction } = this.props;
+    loadAppAction();
+  }
+
+  render() {
+    const {
+      initialLoadData,
+      activateModalAction,
+      deactivateModalAction,
+      toggleModal
+    } = this.props;
+    console.log('props', this.props)
+    return (
+      <div className="app">
+        {
+          toggleModal.modalActive &&
+          <SignInModal
+            deactivateModalAction={deactivateModalAction}
+          />
+        }
+        <Hero
+          heroData={initialLoadData[0]}
+          activateModalAction={activateModalAction}
         />
-      }
-      <Hero
-        heroData={initialLoadData[0]}
-        activateModalAction={activateModalAction}
-      />
-      <div className="promo-gradient">
-        <Promo
-          promoData={initialLoadData[1].promoPosts[0]}
+        <div className="promo-gradient">
+          <Promo
+            promoData={initialLoadData[1].promoPosts[0]}
+          />
+          <Promo
+            promoData={initialLoadData[1].promoPosts[1]}
+          />
+          <Promo
+            promoData={initialLoadData[1].promoPosts[2]}
+          />
+          <Promo
+            promoData={initialLoadData[1].promoPosts[3]}
+          />
+          <div className="filler" />
+        </div>
+        <FromOurScropios
+          fromOurScorpios={initialLoadData[2]}
+          activateModalAction={activateModalAction}
         />
-        <Promo
-          promoData={initialLoadData[1].promoPosts[1]}
+        <SomeNotableScorpios
+          someNotableScorpios={initialLoadData[3]}
+          activateModalAction={activateModalAction}
         />
-        <Promo
-          promoData={initialLoadData[1].promoPosts[2]}
+        <BecomeOneOfUs
+          becomeOneOfUs={initialLoadData[4]}
         />
-        <Promo
-          promoData={initialLoadData[1].promoPosts[3]}
+        <LetsBeInTouch
+          letsBeInTouch={initialLoadData[5]}
         />
-        <div className="filler" />
+        <Footer
+          footer={initialLoadData[6]}
+        />
       </div>
-      <FromOurScropios
-        fromOurScorpios={initialLoadData[2]}
-        activateModalAction={activateModalAction}
-      />
-      <SomeNotableScorpios
-        someNotableScorpios={initialLoadData[3]}
-        activateModalAction={activateModalAction}
-      />
-      <BecomeOneOfUs
-        becomeOneOfUs={initialLoadData[4]}
-      />
-      <LetsBeInTouch
-        letsBeInTouch={initialLoadData[5]}
-      />
-      <Footer
-        footer={initialLoadData[6]}
-      />
-    </div>
-  );
+    );
+  }
 }
 
 App.propTypes = {
@@ -106,6 +116,7 @@ App.defaultProp = {
 }
 
 function mapStateToProps({ initialLoadReducer, toggleModalReducer }) {
+  console.log('lets see', initialLoadReducer);
   return {
     initialLoadData: initialLoadReducer,
     toggleModal: toggleModalReducer
@@ -114,6 +125,7 @@ function mapStateToProps({ initialLoadReducer, toggleModalReducer }) {
 
 export default connect(
   mapStateToProps, {
+    loadAppAction: actions.loadAppAction,
     activateModalAction: actions.activateModalAction,
     deactivateModalAction: actions.deactivateModalAction,
   })

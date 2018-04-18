@@ -6,7 +6,7 @@ const initialModalState = {
   modalActive: false
 }
 
-export default function (state = { appData, initialModalState }, action) {
+export default function (state = initialModalState, action) {
   switch (action.type) {
     case types.OPEN_MODAL:
       return { ...state, modalActive: true };

@@ -28,6 +28,7 @@
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "gifshot": "^0.4.5",
+    "immutable": "^3.8.2",
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-aria-modal": "^2.12.1",
