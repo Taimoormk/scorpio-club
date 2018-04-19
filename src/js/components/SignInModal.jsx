@@ -10,7 +10,12 @@ import AriaModal from 'react-aria-modal';
 import * as actions from '../actions';
 
 const SignInModal = (props) => {
-  const { deactivateModalAction, signInFacebookAction, signInGoogleAction, signOutAction } = props;
+  const { 
+    deactivateModalAction, 
+    signInFacebookAction, 
+    signInGoogleAction, 
+    signOutAction 
+  } = props;
   return (
     <div id="signin-modal">
       <AriaModal
