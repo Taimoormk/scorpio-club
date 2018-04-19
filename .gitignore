@@ -58,3 +58,9 @@ typings/
 .env
 
 .DS_Store
+
+# Scorpio Club content
+api
+sagas
+reducers
+action

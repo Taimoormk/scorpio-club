@@ -3,10 +3,10 @@ import React, { Component } from 'react';
 import { arrayOf, shape, func, bool } from 'prop-types';
 import { connect } from 'react-redux';
 import {
-  BrowserRouter as Router,
-  Link,
-  Route,
-  Switch
+  // BrowserRouter as Router,
+  // Link,
+  // Route,
+  // Switch
 } from 'react-router-dom';
 
 // ########## Import Containers Here ##########
@@ -37,7 +37,6 @@ export class App extends Component {
       deactivateModalAction,
       toggleModal
     } = this.props;
-    console.log('props', this.props)
     return (
       <div className="app">
         {
@@ -116,7 +115,6 @@ App.defaultProp = {
 }
 
 function mapStateToProps({ initialLoadReducer, toggleModalReducer }) {
-  console.log('lets see', initialLoadReducer);
   return {
     initialLoadData: initialLoadReducer,
     toggleModal: toggleModalReducer

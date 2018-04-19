@@ -8,7 +8,6 @@ import Typed from 'react-typed';
 // ########## Import Components Here ##########
 
 const Hero = (props) => {
-  console.log('Hero props', props)
   const { heroData, activateModalAction } = props;
   return (
     <section id="hero">
