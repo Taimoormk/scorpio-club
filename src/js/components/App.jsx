@@ -114,10 +114,11 @@ App.defaultProp = {
   initialLoadData: null
 }
 
-function mapStateToProps({ initialLoadReducer, toggleModalReducer }) {
+function mapStateToProps({ initialLoadReducer, toggleModalReducer, isAuthenticatedReducer }) {
   return {
     initialLoadData: initialLoadReducer,
-    toggleModal: toggleModalReducer
+    toggleModal: toggleModalReducer,
+    isAuthenticated: isAuthenticatedReducer
   };
 };
 

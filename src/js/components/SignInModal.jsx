@@ -10,7 +10,7 @@ import AriaModal from 'react-aria-modal';
 import * as actions from '../actions';
 
 const SignInModal = (props) => {
-  const { deactivateModalAction, signInAction, signOutAction } = props;
+  const { deactivateModalAction, signInFacebookAction, signInGoogleAction, signOutAction } = props;
   return (
     <div id="signin-modal">
       <AriaModal
@@ -29,13 +29,13 @@ const SignInModal = (props) => {
                 className="facebook-login-button"
                 src="./images/facebook-login-button.png"
                 alt="Facebook login button"
-                onClick={() => signInAction()}
+                onClick={() => signInFacebookAction()}
               />
               <img
                 className="google-login-button"
                 src="./images/google-login-button.png"
                 alt="Google login button"
-                onClick={() => signInAction()}
+                onClick={() => signInGoogleAction()}
               />
             </div>
           </div>
@@ -61,6 +61,7 @@ function mapStateToProps({ signinsignoutReducer }) {
 };
 
 export default connect(mapStateToProps, {
-  signInAction: actions.signInAction,
+  signInFacebookAction: actions.signInFacebookAction,
+  signInGoogleAction: actions.signInGoogleAction,
   signOutAction: actions.signOutAction,
 })(SignInModal);

@@ -28,9 +28,16 @@ export function deactivateModalAction(value) {
   }
 }
 
-export function signInAction(value) {
+export function signInFacebookAction(value) {
   return {
-    type: types.SIGN_IN,
+    type: types.SIGN_IN_FACEBOOK,
+    payload: value
+  }
+}
+
+export function signInGoogleAction(value) {
+  return {
+    type: types.SIGN_IN_GOOGLE,
     payload: value
   }
 }
