@@ -8,10 +8,51 @@
     flex: 0 1 30%;
     border-radius: 7px;
     border: 3px solid $white;
-    cursor: pointer;
-    .from-our-scorpios-gallery-item {
+    &:hover .from-our-scorpios-gallery-overlay-content {
+      top: 50%;
+      left: 50%;
+      opacity: 1;
+    }
+    .from-our-scorpio-gallery-item {
       flex: 0 1 30%;
       border-radius: 7px;
+      position: relative;
+    }
+    .from-our-scorpio-gallery-item-overlay{
+      background: rgba(0,0,0,0.7);
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      left: 0px;
+      right: 0px;
+      top: 0px;
+      bottom: 0px;
+      opacity: 0;
+      transition: all 0.5s ease-in-out 0s;
+      &:hover {
+        opacity: 1;
+        border-radius: 5px;
+      }
+    }
+    .from-our-scorpios-gallery-image {
+      border-radius: 5px;
+    }
+    .from-our-scorpios-gallery-overlay-content {
+      position: absolute;
+      text-align: center;
+      padding: 0 auto;
+      width: 100%;
+      top: 50%;
+      left: 50%;
+      opacity: 0;
+      transform: translate(-50%, -50%);
+      transition: all 0.3s ease-in-out 0s;
+      .from-our-scorpios-gallery-overlay-category {
+        @include H4(center, $white);
+      }
+      .from-our-scorpios-gallery-overlay-date {
+        @include P(center, $white);
+      }
     }
   }
   .some-notable-scorpios-gallery {

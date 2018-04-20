@@ -13,7 +13,6 @@ const BecomeOneOfUs = (props) => {
     <section id="become-one-of-us">
       <div className="wrapper">
         <h3 className="become-one-of-us-heading">{becomeOneOfUs.sectionHeading}</h3>
-        {/* <h4 className="become-one-of-us-subheading">{becomeOneOfUs.sectionH3}</h4> */}
         <Typed
           className="become-one-of-us-subheading"
           strings={[becomeOneOfUs.sectionLine1, becomeOneOfUs.sectionLine2]}
@@ -36,11 +35,5 @@ BecomeOneOfUs.propTypes = {
     sectionButtonText: string.isRequired,
   }).isRequired,
 }
-
-// function mapStateToProps(state) {
-//   return {
-//     key: null
-//   };
-// };
 
 export default BecomeOneOfUs;

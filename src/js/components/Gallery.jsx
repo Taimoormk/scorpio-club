@@ -40,18 +40,27 @@ class Gallery extends Component {
     return (
       fromOurScorpiosData.map((image, k) => {
         const postImg = fromOurScorpiosData[k].postImg;
+        const postCategoty = fromOurScorpiosData[k].postCategory;
+        const postDate = fromOurScorpiosData[k].postDate;
         return (
           <div
             key={k}
             className="from-our-scorpios-gallery"
           >
-            <img
-              src={postImg}
-              className="from-our-scorpios-gallery-item"
-              alt="from our scorpios gallery item"
-              onMouseEnter={() => this.fromOurScorpiosonMouseEnterHandler()}
-              onMouseLeave={() => this.fromOurScorpiosonMouseLeaveHandler()}
-            />
+            <div className="from-our-scorpio-gallery-item">
+              <div className="from-our-scorpio-gallery-item-overlay"></div>
+              <img
+                src={postImg}
+                className="from-our-scorpios-gallery-image"
+                alt="from our scorpios gallery item"
+                onMouseEnter={() => this.fromOurScorpiosonMouseEnterHandler()}
+                onMouseLeave={() => this.fromOurScorpiosonMouseLeaveHandler()}
+              />
+              <div className="from-our-scorpios-gallery-overlay-content">
+                <h4 className="from-our-scorpios-gallery-overlay-category">{postCategoty}</h4>
+                <p className="from-our-scorpios-gallery-overlay-date">{postDate}</p>
+              </div>
+            </div>
           </div>
         )
       })

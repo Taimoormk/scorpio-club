@@ -24,6 +24,34 @@ import * as actions from '../actions';
 
 export class App extends Component {
 
+  static propTypes = {
+    initialLoadData: arrayOf(
+      shape({
+        promoPosts: arrayOf(
+        ).isRequired,
+        fromOurScorpios: shape(
+        ).isRequired,
+        someNotableScorpios: shape(
+        ).isRequired,
+        becomeOneOfUs: shape(
+        ).isRequired,
+        letsBeInTouch: shape(
+        ).isRequired,
+        footer: shape(
+        ).isRequired,
+      }).isRequired,
+    ).isRequired,
+    activateModalAction: func.isRequired,
+    deactivateModalAction: func.isRequired,
+    toggleModal: shape({
+      modalActive: bool.isRequired
+    }).isRequired,
+  }
+
+  static defaultProp = {
+    initialLoadData: null
+  }
+
   constructor(props) {
     super(props);
     const { loadAppAction } = this.props;
@@ -84,34 +112,6 @@ export class App extends Component {
       </div>
     );
   }
-}
-
-App.propTypes = {
-  initialLoadData: arrayOf(
-    shape({
-      promoPosts: arrayOf(
-      ).isRequired,
-      fromOurScorpios: shape(
-      ).isRequired,
-      someNotableScorpios: shape(
-      ).isRequired,
-      becomeOneOfUs: shape(
-      ).isRequired,
-      letsBeInTouch: shape(
-      ).isRequired,
-      footer: shape(
-      ).isRequired,
-    }).isRequired,
-  ).isRequired,
-  activateModalAction: func.isRequired,
-  deactivateModalAction: func.isRequired,
-  toggleModal: shape({
-    modalActive: bool.isRequired
-  }).isRequired,
-}
-
-App.defaultProp = {
-  initialLoadData: null
 }
 
 function mapStateToProps({ initialLoadReducer, toggleModalReducer, isAuthenticatedReducer }) {
