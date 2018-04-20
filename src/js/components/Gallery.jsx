@@ -27,14 +27,6 @@ class Gallery extends Component {
     someNotableScorpiosData: null
   }
 
-  fromOurScorpiosonMouseEnterHandler() {
-    // console.log('fromOurScorpiosonMouseEnterHandler');
-  }
-
-  fromOurScorpiosonMouseLeaveHandler() {
-    // console.log('fromOurScorpiosonMouseLeaveHandler');
-  }
-
   fromOurScorpiosRender() {
     const { fromOurScorpiosData } = this.props;
     return (
@@ -53,8 +45,6 @@ class Gallery extends Component {
                 src={postImg}
                 className="from-our-scorpios-gallery-image"
                 alt="from our scorpios gallery item"
-                onMouseEnter={() => this.fromOurScorpiosonMouseEnterHandler()}
-                onMouseLeave={() => this.fromOurScorpiosonMouseLeaveHandler()}
               />
               <div className="from-our-scorpios-gallery-overlay-content">
                 <h4 className="from-our-scorpios-gallery-overlay-category">{postCategoty}</h4>
@@ -67,31 +57,30 @@ class Gallery extends Component {
     )
   }
 
-  someNotableScorpiosonMouseEnterHandler() {
-    // console.log('someNotableScorpiosonMouseEnterHandler');
-  }
-
-  someNotableScorpiosonMouseLeaveHandler() {
-    // console.log('someNotableScorpiosonMouseLeaveHandler');
-  }
-
   someNotableScorpiosRender() {
     const { someNotableScorpiosData } = this.props;
     return (
       someNotableScorpiosData.map((image, k) => {
         const postImg = someNotableScorpiosData[k].postImg;
+        const postCategory = someNotableScorpiosData[k].postCategory;
+        const postDate = someNotableScorpiosData[k].postDate;
         return (
           <div
             key={k}
             className="some-notable-scorpios-gallery"
           >
-            <img
-              src={postImg}
-              className="some-notable-scorpios-gallery-item"
-              alt="some notable scorpios gallery item"
-              onMouseEnter={() => this.someNotableScorpiosonMouseEnterHandler()}
-              onMouseLeave={() => this.someNotableScorpiosonMouseLeaveHandler()}
-            />
+            <div className="some-notable-scorpios-gallery-item">
+            <div className="some-notable-scorpios-gallery-item-overlay"></div>
+              <img
+                src={postImg}
+                className="some-notable-scorpios-gallery-item"
+                alt="some notable scorpios gallery item"
+              />
+              <div className="some-notable-scorpios-gallery-overlay-content">
+                <h4 className="some-notable-scorpios-gallery-overlay-category">{postCategory}</h4>
+                <p className="some-notable-scorpios-gallery-overlay-date">{postDate}</p>
+              </div>
+            </div>
           </div>
         )
       })
