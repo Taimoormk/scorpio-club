@@ -27,10 +27,12 @@ export default class Dashboard extends Component {
     return (
       <div id="dashboard">
         <DashboardAppBar toggleVisibility={this.toggleVisibility} />
-        <div className="dashboard-main-content">
-          <DashboardContent visible={this.state.visible} />
-        </div>
-        <div className="dashboard-side-feed">
+        <div className="dashboard-content">
+          <div className="dashboard-main-content">
+            <DashboardContent visible={this.state.visible} />
+          </div>
+          <div className="dashboard-side-feed">
+          </div>
         </div>
       </div>
     );
