@@ -17,12 +17,10 @@ const SideFeed = () => (
       summary={summary}
       extraImages={extraImages}
     />
-
     <Feed.Event>
       <Feed.Label image={image} />
       <Feed.Content date={date} summary={summary} extraImages={extraImages} />
     </Feed.Event>
-
     <Feed.Event>
       <Feed.Label image={image} />
       <Feed.Content>
