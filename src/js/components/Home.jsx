@@ -112,7 +112,6 @@ function mapStateToProps({ initialLoadReducer, toggleModalReducer, isAuthenticat
 
 export default connect(
   mapStateToProps, {
-    loadAppAction: actions.loadAppAction,
     activateModalAction: actions.activateModalAction,
     deactivateModalAction: actions.deactivateModalAction,
   })
