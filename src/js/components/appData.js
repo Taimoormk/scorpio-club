@@ -3,7 +3,7 @@ const appData = [
     id: Math.random(),
     sectionTitle: 'Scorpio Club',
     sectionHeading: 'Scorpio Club',
-    sectionLine1: 'Scorpio is the best sign ever!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!',
+    sectionLine1: 'Scorpio is the best sign ever.',
     sectionLine2: 'Join us to know all the reasons WHY!',
     sectionButtonText: 'let me in'
   },
@@ -44,8 +44,8 @@ const appData = [
     id: Math.random(),
     sectionTitle: 'From Our Scorpios',
     sectionHeading: 'From Our Scorpios',
-    sectionLine1: 'With our drag and drop system you can create pages in minutes!',
-    sectionLine2: 'Another line lets see how it looks like',
+    sectionLine1: 'This is what our Scorpio members have made with this club',
+    sectionLine2: 'Join today! to start building your own creative ideas',
     sectionButtonText: 'see more',
     fromOurScorpiosData: [
       {

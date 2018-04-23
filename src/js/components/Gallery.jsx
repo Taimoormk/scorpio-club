@@ -40,7 +40,7 @@ class Gallery extends Component {
             className="from-our-scorpios-gallery"
           >
             <div className="from-our-scorpio-gallery-item">
-              <div className="from-our-scorpio-gallery-item-overlay"></div>
+              <div className="from-our-scorpio-gallery-item-overlay" />
               <img
                 src={postImg}
                 className="from-our-scorpios-gallery-image"
@@ -70,7 +70,7 @@ class Gallery extends Component {
             className="some-notable-scorpios-gallery"
           >
             <div className="some-notable-scorpios-gallery-item">
-            <div className="some-notable-scorpios-gallery-item-overlay"></div>
+              <div className="some-notable-scorpios-gallery-item-overlay" />
               <img
                 src={postImg}
                 className="some-notable-scorpios-gallery-item"
