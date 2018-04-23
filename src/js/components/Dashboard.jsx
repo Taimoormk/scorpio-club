@@ -15,6 +15,7 @@ import { Container, Sidebar, Segment, Button, Menu, Image, Icon, Header, Breadcr
 // ########## Import Components Here ##########
 import DashboardAppBar from './Dashboard/DashboardAppBar';
 import DashboardContent from './Dashboard/DashboardContent';
+import SideFeed from './Dashboard/SideFeed';
 
 export default class Dashboard extends Component {
 
@@ -32,6 +33,7 @@ export default class Dashboard extends Component {
             <DashboardContent visible={this.state.visible} />
           </div>
           <div className="dashboard-side-feed">
+          <SideFeed />
           </div>
         </div>
       </div>
