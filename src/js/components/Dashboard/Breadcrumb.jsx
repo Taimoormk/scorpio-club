@@ -5,9 +5,9 @@ const Breadcrumbs = () => (
   <Breadcrumb>
     <Breadcrumb.Section link>Home</Breadcrumb.Section>
     <Breadcrumb.Divider icon='right angle' />
-    <Breadcrumb.Section link>Store</Breadcrumb.Section>
+    <Breadcrumb.Section link>Dashboard</Breadcrumb.Section>
     <Breadcrumb.Divider icon='right angle' />
-    <Breadcrumb.Section active>T-Shirt</Breadcrumb.Section>
+    <Breadcrumb.Section active>Dashboard</Breadcrumb.Section>
   </Breadcrumb>
 )
 

@@ -4,11 +4,12 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-basis: 100%;
+    height: calc(100vh - 64px);
     .dashboard-main-content{
-      flex-flow: 1 1 70%;
+      flex: 1 1 80%;
     }
     .dashboard-side-feed {
-      flex-flow: 0 1 70%;
+      flex: 0 1 20%;
     }
   }
 }

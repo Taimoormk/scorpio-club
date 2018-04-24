@@ -8,14 +8,15 @@ import {
   Route,
   Switch
 } from 'react-router-dom';
-import { Container, Sidebar, Segment, Button, Menu, Image, Icon, Header, Breadcrumb } from 'semantic-ui-react';
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
 import DashboardAppBar from './Dashboard/DashboardAppBar';
-import DashboardContent from './Dashboard/DashboardContent';
+import DashboardMainContent from './Dashboard/DashboardMainContent';
 import SideFeed from './Dashboard/SideFeed';
+import Profile from './Dashboard/Profile';
+import Gifs from './Dashboard/Gifs';
 
 export default class Dashboard extends Component {
 
@@ -27,13 +28,33 @@ export default class Dashboard extends Component {
     const { visible } = this.state;
     return (
       <div id="dashboard">
-        <DashboardAppBar toggleVisibility={this.toggleVisibility} />
+        <DashboardAppBar 
+          toggleVisibility={this.toggleVisibility} 
+        />
         <div className="dashboard-content">
           <div className="dashboard-main-content">
-            <DashboardContent visible={this.state.visible} />
+            <Router>
+              <Switch>
+                <Route exact path="/dashboard/profile" component={Profile} />
+                <Route exact path="/dashboard/gifs" component={Gifs} />
+                <Route
+                  path="/dashboard"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <DashboardMainContent
+                          visible={visible}
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
+              </Switch>
+            </Router>
           </div>
           <div className="dashboard-side-feed">
-          <SideFeed />
+            <SideFeed />
           </div>
         </div>
       </div>

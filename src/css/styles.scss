@@ -3,7 +3,7 @@
 @import './partials/mixins';
 @import './partials/variables';
 
-// ########## Import Modules Here ##########
+// ########## Import FrontEnd Modules Here ##########
 @import './modules/app';
 @import './modules/hero';
 @import './modules/promo';
@@ -15,4 +15,6 @@
 @import './modules/footer';
 @import './modules/signinmodal';
 
+// ########## Import BackEnd Dashboard Modules Here ##########
 @import './modules/dashboard';
+@import './modules/Dashboard/dashboardContent';
