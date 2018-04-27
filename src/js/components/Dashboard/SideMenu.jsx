@@ -16,17 +16,20 @@ const SideMenu = (props) => {
     <Router>
       <Switch>
         <div>
-          <Menu.Item name='home'>
+          <Menu.Item name='home' as={Link} to='/dashboard/dashboard' children="Dashboard">
             <Icon name='home' />
-            <Link to="/dashboard">Dashboard</Link>
+            Home
+            {/* <Link to="/dashboard">Dashboard</Link> */}
           </Menu.Item>
-          <Menu.Item name='gamepad'>
+          <Menu.Item name='gamepad' as={Link} to='/dashboard/profile'>
             <Icon name='gamepad' />
-            <Link to="/profile">Profile</Link>
+            Profile
+            {/* <Link to="/profile">Profile</Link> */}
           </Menu.Item>
-          <Menu.Item name='camera'>
+          <Menu.Item name='camera' as={Link} to='/dashboard/gifs'>
             <Icon name='camera' />
-            <Link to="/gifs">Gifs</Link>
+            Gifs
+            {/* <Link to="/gifs">Gifs</Link> */}
           </Menu.Item>
         </div>
       </Switch>

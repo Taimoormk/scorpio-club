@@ -6,7 +6,8 @@ import {
   BrowserRouter as Router,
   Link,
   Route,
-  Switch
+  Switch,
+  Redirect
 } from 'react-router-dom';
 
 // ########## Import Containers Here ##########
@@ -28,15 +29,28 @@ export default class Dashboard extends Component {
     const { visible } = this.state;
     return (
       <div id="dashboard">
-        <DashboardAppBar 
-          toggleVisibility={this.toggleVisibility} 
+        <DashboardAppBar
+          toggleVisibility={this.toggleVisibility}
         />
         <div className="dashboard-content">
           <div className="dashboard-main-content">
             <Router>
               <Switch>
-                <Route exact path="/dashboard/profile" component={Profile} />
-                <Route exact path="/dashboard/gifs" component={Gifs} />
+                {/* <Route path="/dashboard/profile" component={Profile} />
+                <Route path="/dashboard/gifs" component={Gifs} /> */}
+                <Route
+                  exact
+                  path="/dashboard/profile"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <Profile
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
                 <Route
                   path="/dashboard"
                   render={
@@ -50,6 +64,7 @@ export default class Dashboard extends Component {
                     }
                   }
                 />
+                <Redirect to='/' />
               </Switch>
             </Router>
           </div>
