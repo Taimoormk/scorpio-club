@@ -12,6 +12,7 @@ import SideMenu from './SideMenu';
 import Profile from './Profile';
 import Gifs from './Gifs';
 import ScorpioTraits from './ScorpioTraits';
+import ScorpioGifs from './ScorpioGifs';
 import ScorpioTraitsEditor from './ScorpioTraitsEditor';
 
 export default class DashboardMainContent extends Component {
@@ -36,7 +37,7 @@ export default class DashboardMainContent extends Component {
               </Segment>
               <Segment textAlign={'center'}>
                 <Header as='h4' className="dashboard-content-subheading">Latest Scorpio Gifs</Header>
-                <ScorpioTraits />
+                <ScorpioGifs />
               </Segment>
             </Segment.Group>
           </Sidebar.Pusher>
