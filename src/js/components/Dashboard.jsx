@@ -18,6 +18,7 @@ import DashboardMainContent from './Dashboard/DashboardMainContent';
 import SideFeed from './Dashboard/SideFeed';
 import Profile from './Dashboard/Profile';
 import Gifs from './Dashboard/Gifs';
+import Ad from './Dashboard/Ad';
 
 export default class Dashboard extends Component {
 
@@ -70,6 +71,7 @@ export default class Dashboard extends Component {
           </div>
           <div className="dashboard-side-feed">
             <SideFeed />
+            <Ad />
           </div>
         </div>
       </div>
