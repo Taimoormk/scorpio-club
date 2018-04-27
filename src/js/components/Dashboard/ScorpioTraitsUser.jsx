@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Card, Segment, Image } from 'semantic-ui-react';
+import { Grid, Card, Segment, Image, Rating } from 'semantic-ui-react';
 
 export default class ScorpioTraitsUser extends Component {
   render() {
@@ -11,6 +11,12 @@ export default class ScorpioTraitsUser extends Component {
             <Card.Header>
               Steve Sanders
             </Card.Header>
+            <Card.Meta>
+              <span className='date'>
+                November, 16<sup>th</sup>
+              </span>
+              <Rating icon='heart' defaultRating={0} maxRating={5} />
+            </Card.Meta>
             <Card.Description>
               <Segment attached textAlign='left'>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt
