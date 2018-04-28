@@ -37,11 +37,7 @@ export default class ScorpioGifsUser extends Component {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            {/* <a> */}
-              {/* <Icon name='user' /> */}
-              {/* 22 Friends */}
-              <SocialShare />
-            {/* </a> */}
+            <SocialShare />
           </Card.Content>
         </Card>
       </Grid.Column>

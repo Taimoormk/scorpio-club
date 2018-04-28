@@ -36,6 +36,7 @@
     "prop-types": "^15.6.1",
     "react": "^16.2.0",
     "react-aria-modal": "^2.12.1",
+    "react-custom-scrollbars": "^4.2.1",
     "react-dom": "^16.2.0",
     "react-particles-js": "^2.1.2",
     "react-redux": "^5.0.7",

@@ -9,6 +9,7 @@ import {
   Switch,
   Redirect
 } from 'react-router-dom';
+import { Scrollbars } from 'react-custom-scrollbars';
 
 // ########## Import Containers Here ##########
 
@@ -36,37 +37,39 @@ export default class Dashboard extends Component {
         <div className="dashboard-content">
           <div className="dashboard-main-content">
             <Router>
-              <Switch>
-                {/* <Route path="/dashboard/profile" component={Profile} />
+              <Scrollbars>
+                <Switch>
+                  {/* <Route path="/dashboard/profile" component={Profile} />
                 <Route path="/dashboard/gifs" component={Gifs} /> */}
-                <Route
-                  exact
-                  path="/dashboard/profile"
-                  render={
-                    function (routeProps) {
-                      return (
-                        <Profile
-                          {...routeProps}
-                        />
-                      )
+                  <Route
+                    exact
+                    path="/dashboard/profile"
+                    render={
+                      function (routeProps) {
+                        return (
+                          <Profile
+                            {...routeProps}
+                          />
+                        )
+                      }
                     }
-                  }
-                />
-                <Route
-                  path="/dashboard"
-                  render={
-                    function (routeProps) {
-                      return (
-                        <DashboardMainContent
-                          visible={visible}
-                          {...routeProps}
-                        />
-                      )
+                  />
+                  <Route
+                    path="/dashboard"
+                    render={
+                      function (routeProps) {
+                        return (
+                          <DashboardMainContent
+                            visible={visible}
+                            {...routeProps}
+                          />
+                        )
+                      }
                     }
-                  }
-                />
-                <Redirect to='/' />
-              </Switch>
+                  />
+                  <Redirect to='/' />
+                </Switch>
+              </Scrollbars>
             </Router>
           </div>
           <div className="dashboard-side-feed">
