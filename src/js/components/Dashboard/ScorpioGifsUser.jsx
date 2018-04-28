@@ -1,5 +1,21 @@
 import React, { Component } from 'react';
 import { Card, Image, Icon, Grid } from 'semantic-ui-react';
+import {
+  FacebookShareButton,
+  GooglePlusShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+  TelegramShareButton,
+  WhatsappShareButton,
+  PinterestShareButton,
+  VKShareButton,
+  OKShareButton,
+  RedditShareButton,
+  TumblrShareButton,
+  LivejournalShareButton,
+  EmailShareButton,
+} from 'react-share';
+import SocialShare from './SocialShare';
 
 export default class ScorpioGifsUser extends Component {
   render() {
@@ -21,10 +37,11 @@ export default class ScorpioGifsUser extends Component {
             </Card.Description>
           </Card.Content>
           <Card.Content extra>
-            <a>
-              <Icon name='user' />
-              22 Friends
-            </a>
+            {/* <a> */}
+              {/* <Icon name='user' /> */}
+              {/* 22 Friends */}
+              <SocialShare />
+            {/* </a> */}
           </Card.Content>
         </Card>
       </Grid.Column>
