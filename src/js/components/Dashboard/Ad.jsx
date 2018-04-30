@@ -8,3 +8,5 @@ const Ad = () => (
     centered
   />
 );
+
+export default Ad;
