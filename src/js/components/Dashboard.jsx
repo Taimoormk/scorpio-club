@@ -1,13 +1,10 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import { arrayOf, shape, func, bool } from 'prop-types';
-import { connect } from 'react-redux';
+// import { arrayOf, shape, func, bool } from 'prop-types';
+// import { connect } from 'react-redux';
 import {
-  BrowserRouter as Router,
-  Link,
   Route,
   Switch,
-  Redirect
 } from 'react-router-dom';
 import { Scrollbars } from 'react-custom-scrollbars';
 
@@ -15,7 +12,6 @@ import { Scrollbars } from 'react-custom-scrollbars';
 
 // ########## Import Components Here ##########
 import DashboardAppBar from './Dashboard/DashboardAppBar';
-import DashboardMainContent from './Dashboard/DashboardMainContent';
 import SideFeed from './Dashboard/SideFeed';
 import Profile from './Dashboard/Profile';
 import Gifs from './Dashboard/Gifs';
