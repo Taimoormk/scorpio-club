@@ -6,8 +6,8 @@ import SideMenu from './SideMenu';
 import ScorpioTraits from './ScorpioTraits';
 import ScorpioGifs from './ScorpioGifs';
 
-const DashboardMainContent = () => {
-  const { visible } = this.props;
+const DashboardMainContent = (props) => {
+  const { visible } = props;
   return (
     <div id="dashboard-main-content">
       <Sidebar.Pushable className="dashboard-main-content" as={Segment}>
