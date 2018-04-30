@@ -1,5 +1,5 @@
 import React from 'react'
-import { Grid, Image, Segment, Card } from 'semantic-ui-react';
+import { Grid } from 'semantic-ui-react';
 import ScorpioGifsUser from './ScorpioGifsUser';
 
 const ScorpioGifs = () => (
