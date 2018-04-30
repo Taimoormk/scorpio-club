@@ -1,16 +1,16 @@
-import React, { Component } from 'react';
-import DashbordMainContent from './DashboardMainContent';
+import React from 'react';
+import DashboardMainContent from './DashboardMainContent';
 
-export default class DashboardHome extends Component {
-  render() {
-    const { visible, toggleVisibility } = this.props;
+const DashboardHome = (props) => {
+    const { visible, toggleVisibility } = props;
     return (
       <div id="dashboard-home">
-        <DashbordMainContent
+        <DashboardMainContent
           visible={visible}
-          toggleVisibility={this.toggleVisibility}
+          toggleVisibility={toggleVisibility}
         />
       </div>
     );
   }
-}
+
+export default DashboardHome;
