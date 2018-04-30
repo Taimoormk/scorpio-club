@@ -6,7 +6,7 @@ const date = '3 days ago';
 const summary = 'Helen Troy added 2 photos';
 const extraImages = [
   './images/bill-gates.jpg',
-  './images/bill-gates.jpg',
+  './images/bill-gates 2.jpg',
 ];
 
 const SideFeed = () => (

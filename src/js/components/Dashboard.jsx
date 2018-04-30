@@ -27,7 +27,10 @@ export default class Dashboard extends Component {
 
   state = { visible: false };
 
-  toggleVisibility = () => this.setState({ visible: !this.state.visible });
+  toggleVisibility = () => {
+    console.log('fired');
+    this.setState({ visible: !this.state.visible });
+  }
 
   render() {
     const { visible } = this.state;
@@ -43,7 +46,19 @@ export default class Dashboard extends Component {
                 visible={visible}
               /> */}
               <Switch>
-                <Route path="/dashboard/profile" component={Profile} />
+                <Route
+                  path="/dashboard/profile"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <Profile
+                          visible={visible}
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
                 <Route path="/dashboard/create-gifs" component={CreateGifs} />
                 <Route path="/dashboard/notable-scorpios" component={NotableScorpios} />
                 <Route path="/dashboard/from-our-scorpios" component={FromOurScorpios} />
