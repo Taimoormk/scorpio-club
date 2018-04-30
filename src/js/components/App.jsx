@@ -1,10 +1,9 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
-import { arrayOf, shape, func, bool } from 'prop-types';
+// import { arrayOf, shape, func, bool } from 'prop-types';
 import { connect } from 'react-redux';
 import {
   BrowserRouter as Router,
-  Link,
   Route,
   Switch
 } from 'react-router-dom';
@@ -15,7 +14,6 @@ import {
 import Home from './Home';
 import Dashboard from './Dashboard';
 import * as actions from '../actions';
-import Profile from './Dashboard/Profile';
 
 export class App extends Component {
 
