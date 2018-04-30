@@ -51,6 +51,7 @@ export default class Dashboard extends Component {
                       return (
                         <DashboardHome
                           visible={visible}
+                          // toggleVisibility={this.toggleVisibility}
                           {...routeProps}
                         />
                       )

@@ -3,11 +3,12 @@ import DashbordMainContent from './DashboardMainContent';
 
 export default class DashboardHome extends Component {
   render() {
-    const { visible } = this.props;
+    const { visible, toggleVisibility } = this.props;
     return (
       <div id="dashboard-home">
         <DashbordMainContent
           visible={visible}
+          toggleVisibility={this.toggleVisibility}
         />
       </div>
     );
