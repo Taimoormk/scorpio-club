@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Gifs extends Component {
-  render() {
-    return (
-      <div id="gifs">
-        Gifs
-      </div>
-    );
-  }
-}
+const Gifs = () => (
+  <div id="gifs">
+    Gifs
+  </div>
+);
+
+export default Gifs;
