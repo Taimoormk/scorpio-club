@@ -1,44 +1,32 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
-import {
-  Link,
-} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-const SideMenu = () => (
-  <div>
-    <Menu.Item name='home'>
-      <Icon name='home' />
-      <Link to="/dashboard">Dashboard</Link>
-    </Menu.Item>
-    <Menu.Item name='gamepad'>
-      <Icon name='gamepad' />
-      <Link to="/dashboard/profile">Profile</Link>
-    </Menu.Item>
-    <Menu.Item name='camera'>
-      <Icon name='camera' />
-      <Link to="/dashboard/create-gifs">Create Gifs</Link>
-    </Menu.Item>
-    <Menu.Item name='camera'>
-      <Icon name='camera' />
-      <Link to="/dashboard/notable-scorpios">Notable Scorpios</Link>
-    </Menu.Item>
-    <Menu.Item name='camera'>
-      <Icon name='camera' />
-      <Link to="/dashboard/from-our-scorpios">From Our Scorpios</Link>
-    </Menu.Item>
-    <Menu.Item name='camera'>
-      <Icon name='camera' />
-      <Link to="/dashboard/share-scorpio-traits">Share Scorpio Traits</Link>
-    </Menu.Item>
-    <Menu.Item name='camera'>
-      <Icon name='camera' />
-      <Link to="/dashboard/marketplace">Marketplace</Link>
-    </Menu.Item>
-    <Menu.Item name='camera'>
-      <Icon name='camera' />
-      <Link to="/dashboard/setting">Settings</Link>
-    </Menu.Item>
-  </div>
-);
+import { DashboardMenuData } from './DashboardMenuData';
+
+class SideMenu extends Component {
+
+  renderSideMenu = () => {
+    return (
+      DashboardMenuData.map((item, index) => {
+        const menuItem = DashboardMenuData[index];
+        return (
+          <Menu.Item id={menuItem.id} name={menuItem.menuItemName}>
+            <Icon name={menuItem.menuIconName} />
+            <Link to={menuItem.menuLinkTo}>{menuItem.menuDisplay}</Link>
+          </Menu.Item>
+        )
+      })
+    )
+  }
+
+  render() {
+    return (
+      <div id="side-menu">
+        {this.renderSideMenu()}
+      </div>
+    );
+  }
+}
 
 export default SideMenu;
