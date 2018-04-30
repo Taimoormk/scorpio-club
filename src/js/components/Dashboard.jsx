@@ -14,7 +14,12 @@ import { Scrollbars } from 'react-custom-scrollbars';
 import DashboardAppBar from './Dashboard/DashboardAppBar';
 import SideFeed from './Dashboard/SideFeed';
 import Profile from './Dashboard/Profile';
-import Gifs from './Dashboard/Gifs';
+import CreateGifs from './Dashboard/CreateGifs';
+import NotableScorpios from './Dashboard/NotableScorpios';
+import FromOurScorpios from './Dashboard/FromOurScorpios';
+import ShareScorpioTraits from './Dashboard/ShareScorpioTraits';
+import Marketplace from './Dashboard/Marketplace';
+import Settings from './Dashboard/Settings';
 import Ad from './Dashboard/Ad';
 import DashboardHome from './Dashboard/DashboardHome';
 
@@ -39,7 +44,12 @@ export default class Dashboard extends Component {
               /> */}
               <Switch>
                 <Route path="/dashboard/profile" component={Profile} />
-                <Route path="/dashboard/gifs" component={Gifs} />
+                <Route path="/dashboard/create-gifs" component={CreateGifs} />
+                <Route path="/dashboard/notable-scorpios" component={NotableScorpios} />
+                <Route path="/dashboard/from-our-scorpios" component={FromOurScorpios} />
+                <Route path="/dashboard/share-scorpio-traits" component={ShareScorpioTraits} />
+                <Route path="/dashboard/marketplace" component={Marketplace} />
+                <Route path="/dashboard/settings" component={Settings} />
                 <Route
                   path="/dashboard"
                   render={
