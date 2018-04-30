@@ -15,6 +15,7 @@ import {
 import Home from './Home';
 import Dashboard from './Dashboard';
 import * as actions from '../actions';
+import Profile from './Dashboard/Profile';
 
 export class App extends Component {
 
@@ -28,8 +29,8 @@ export class App extends Component {
     return (
       <Router>
         <Switch>
-          <Route exact path="/dashboard" component={Dashboard} />
-          <Route path="/" component={Home} />
+          <Route path="/dashboard" component={Dashboard} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </Router>
     );
