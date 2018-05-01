@@ -2,13 +2,11 @@ import React from 'react';
 import DashboardMainContent from './DashboardMainContent';
 
 const DashboardHome = (props) => {
-    const { visible, toggleVisibility } = props;
+  console.log(props);
     return (
       <div id="dashboard-home">
         <DashboardMainContent
           {...props}
-          // visible={visible}
-          // toggleVisibility={toggleVisibility}
         />
       </div>
     );

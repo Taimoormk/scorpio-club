@@ -28,10 +28,7 @@ export default class Dashboard extends Component {
 
   state = { visible: false };
 
-  toggleVisibility = () => {
-    console.log('fired');
-    this.setState({ visible: !this.state.visible });
-  }
+  toggleVisibility = () => this.setState({ visible: !this.state.visible });
 
   render() {
     const { visible } = this.state;
@@ -52,18 +49,19 @@ export default class Dashboard extends Component {
                         <Profile
                           visible={visible}
                           breadcrumbs='Profile'
+                          // toggleVisibility={toggleVisibility}
                           {...routeProps}
                         />
                       )
                     }
                   }
                 />
-                <Route 
+                <Route
                   path="/dashboard/create-gifs"
                   render={
                     function (routeProps) {
                       return (
-                        <CreateGifs 
+                        <CreateGifs
                           visbible={visible}
                           breadcrumbs='Create Gifs'
                           {...routeProps}
@@ -72,12 +70,12 @@ export default class Dashboard extends Component {
                     }
                   }
                 />
-                <Route 
+                <Route
                   path="/dashboard/notable-scorpios"
                   render={
                     function (routeProps) {
                       return (
-                        <NotableScorpios 
+                        <NotableScorpios
                           visible={visible}
                           breadcrumbs='Notable Scorpios'
                           {...routeProps}
@@ -86,12 +84,12 @@ export default class Dashboard extends Component {
                     }
                   }
                 />
-                <Route 
+                <Route
                   path="/dashboard/from-our-scorpios"
                   render={
                     function (routeProps) {
                       return (
-                        <FromOurScorpios 
+                        <FromOurScorpios
                           visibile={visible}
                           breadcrumbs='From Our Scorpios'
                           {...routeProps}
@@ -100,12 +98,12 @@ export default class Dashboard extends Component {
                     }
                   }
                 />
-                <Route 
+                <Route
                   path="/dashboard/share-scorpio-traits"
                   render={
                     function (routeProps) {
                       return (
-                        <ShareScorpioTraits 
+                        <ShareScorpioTraits
                           visibile={visible}
                           breadcrumbs='Share Scorpio Traits'
                           {...routeProps}
@@ -114,12 +112,12 @@ export default class Dashboard extends Component {
                     }
                   }
                 />
-                <Route 
+                <Route
                   path="/dashboard/marketplace"
                   render={
                     function (routeProps) {
                       return (
-                        <Marketplace 
+                        <Marketplace
                           visible={visible}
                           breadcrumbs='Marketplace'
                           {...routeProps}
@@ -128,12 +126,12 @@ export default class Dashboard extends Component {
                     }
                   }
                 />
-                <Route 
+                <Route
                   path="/dashboard/settings"
                   render={
                     function (routeProps) {
                       return (
-                        <Settings 
+                        <Settings
                           visibile={visible}
                           breadcrumbs='Settings'
                           {...routeProps}
@@ -150,13 +148,16 @@ export default class Dashboard extends Component {
                 {/* <Route path="/dashboard/settings" component={Settings} /> */}
                 <Route
                   path="/dashboard"
+                  toggleVisibility={this.toggleVisibility}
                   render={
-                    function (routeProps) {
+                    function (routeProps, props) {
+                      // console.log('Dashboard', props);
+                      // const { toggleVisibility } = props;
                       return (
                         <DashboardHome
                           visible={visible}
                           breadcrumbs='Dashboard'
-                          // toggleVisibility={this.toggleVisibility}
+                          // toggleVisibility={toggleVisibility}
                           {...routeProps}
                         />
                       )
@@ -167,8 +168,10 @@ export default class Dashboard extends Component {
             </Scrollbars>
           </div>
           <div className="dashboard-side-feed">
-            <SideFeed />
-            <Ad />
+            <Scrollbars>
+              <SideFeed />
+              <Ad />
+            </Scrollbars>
           </div>
         </div>
       </div>

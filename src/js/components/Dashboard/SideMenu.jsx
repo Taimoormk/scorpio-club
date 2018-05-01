@@ -6,13 +6,17 @@ import { DashboardMenuData } from './DashboardMenuData';
 
 class SideMenu extends Component {
 
-  renderSideMenu = () => {
+  renderSideMenu = (props) => {
+    // const { toggleVisibility } = props;
     return (
       DashboardMenuData.map((item, index) => {
         const menuItem = DashboardMenuData[index];
         return (
           <Menu.Item id={menuItem.id} name={menuItem.menuItemName}>
-            <Icon name={menuItem.menuIconName} />
+            <Icon 
+              name={menuItem.menuIconName} 
+              // onClick={toggleVisibility} 
+            />
             <Link to={menuItem.menuLinkTo}>{menuItem.menuDisplay}</Link>
           </Menu.Item>
         )

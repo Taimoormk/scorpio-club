@@ -28,7 +28,7 @@ const DashboardAppBar = (props) => {
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" className={styles.flex}>
-            Dashboard
+            Scorpio Club Dashboard
           </Typography>
         </Toolbar>
       </AppBar>
