@@ -5,7 +5,7 @@ const ScorpioTraitsUser = () => (
   <Grid.Column computer={5} mobile={8}>
     <Card>
       <Card.Content>
-        <Image circular floated='left' size='tiny' src='./images/patrick.png' />
+        <Image circular floated='left' size='tiny' src='/images/patrick.png' />
         <Card.Header>
           Steve Sanders
         </Card.Header>

@@ -1,4 +1,4 @@
-export const DashboardMenuData = [
+const DashboardMenuData = [
   {
     id: Math.random(),
     menuItemName: 'home',
@@ -64,3 +64,5 @@ export const DashboardMenuData = [
     menuBreadcrumbs: 'Setting'
   }
 ]
+
+export default DashboardMenuData;

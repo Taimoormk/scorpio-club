@@ -22,7 +22,6 @@ import Marketplace from './Dashboard/Marketplace';
 import Settings from './Dashboard/Settings';
 import Ad from './Dashboard/Ad';
 import DashboardHome from './Dashboard/DashboardHome';
-import DashboardMenuData from './Dashboard/DashboardMenuData';
 
 export default class Dashboard extends Component {
 
@@ -150,7 +149,7 @@ export default class Dashboard extends Component {
                   path="/dashboard"
                   toggleVisibility={this.toggleVisibility}
                   render={
-                    function (routeProps, props) {
+                    function (routeProps) {
                       // console.log('Dashboard', props);
                       // const { toggleVisibility } = props;
                       return (

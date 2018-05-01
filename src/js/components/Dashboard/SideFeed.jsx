@@ -11,26 +11,26 @@ const extraImages = [
 
 const SideFeed = () => (
   <Segment>
-      <Feed>
-        <Feed.Event
-          image={image}
-          date={date}
-          summary={summary}
-          extraImages={extraImages}
-        />
-        <Feed.Event>
-          <Feed.Label image={image} />
-          <Feed.Content date={date} summary={summary} extraImages={extraImages} />
-        </Feed.Event>
-        <Feed.Event>
-          <Feed.Label image={image} />
-          <Feed.Content>
-            <Feed.Date content={date} />
-            <Feed.Summary content={summary} />
-            <Feed.Extra images={extraImages} />
-          </Feed.Content>
-        </Feed.Event>
-      </Feed>
+    <Feed>
+      <Feed.Event
+        image={image}
+        date={date}
+        summary={summary}
+        extraImages={extraImages}
+      />
+      <Feed.Event>
+        <Feed.Label image={image} />
+        <Feed.Content date={date} summary={summary} extraImages={extraImages} />
+      </Feed.Event>
+      <Feed.Event>
+        <Feed.Label image={image} />
+        <Feed.Content>
+          <Feed.Date content={date} />
+          <Feed.Summary content={summary} />
+          <Feed.Extra images={extraImages} />
+        </Feed.Content>
+      </Feed.Event>
+    </Feed>
   </Segment>
 )
 

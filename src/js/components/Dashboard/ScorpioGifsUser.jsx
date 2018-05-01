@@ -5,7 +5,7 @@ import SocialShare from './SocialShare';
 const ScorpioGifsUser = () => (
   <Grid.Column computer={5} mobile={8}>
     <Card>
-      <Image src='./images/patrick.png' />
+      <Image src='/images/patrick.png' />
       <Card.Content>
         <Card.Header>
           Matthew
