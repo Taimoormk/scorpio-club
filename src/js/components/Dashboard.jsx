@@ -22,6 +22,7 @@ import Marketplace from './Dashboard/Marketplace';
 import Settings from './Dashboard/Settings';
 import Ad from './Dashboard/Ad';
 import DashboardHome from './Dashboard/DashboardHome';
+import DashboardMenuData from './Dashboard/DashboardMenuData';
 
 export default class Dashboard extends Component {
 
@@ -42,9 +43,6 @@ export default class Dashboard extends Component {
         <div className="dashboard-content">
           <div className="dashboard-main-content">
             <Scrollbars>
-              {/* <DashboardMainContent
-                visible={visible}
-              /> */}
               <Switch>
                 <Route
                   path="/dashboard/profile"
@@ -53,18 +51,103 @@ export default class Dashboard extends Component {
                       return (
                         <Profile
                           visible={visible}
+                          breadcrumbs='Profile'
                           {...routeProps}
                         />
                       )
                     }
                   }
                 />
-                <Route path="/dashboard/create-gifs" component={CreateGifs} />
-                <Route path="/dashboard/notable-scorpios" component={NotableScorpios} />
-                <Route path="/dashboard/from-our-scorpios" component={FromOurScorpios} />
-                <Route path="/dashboard/share-scorpio-traits" component={ShareScorpioTraits} />
-                <Route path="/dashboard/marketplace" component={Marketplace} />
-                <Route path="/dashboard/settings" component={Settings} />
+                <Route 
+                  path="/dashboard/create-gifs"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <CreateGifs 
+                          visbible={visible}
+                          breadcrumbs='Create Gifs'
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
+                <Route 
+                  path="/dashboard/notable-scorpios"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <NotableScorpios 
+                          visible={visible}
+                          breadcrumbs='Notable Scorpios'
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
+                <Route 
+                  path="/dashboard/from-our-scorpios"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <FromOurScorpios 
+                          visibile={visible}
+                          breadcrumbs='From Our Scorpios'
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
+                <Route 
+                  path="/dashboard/share-scorpio-traits"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <ShareScorpioTraits 
+                          visibile={visible}
+                          breadcrumbs='Share Scorpio Traits'
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
+                <Route 
+                  path="/dashboard/marketplace"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <Marketplace 
+                          visible={visible}
+                          breadcrumbs='Marketplace'
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
+                <Route 
+                  path="/dashboard/settings"
+                  render={
+                    function (routeProps) {
+                      return (
+                        <Settings 
+                          visibile={visible}
+                          breadcrumbs='Settings'
+                          {...routeProps}
+                        />
+                      )
+                    }
+                  }
+                />
+                {/* <Route path="/dashboard/create-gifs" component={CreateGifs} /> */}
+                {/* <Route path="/dashboard/notable-scorpios" component={NotableScorpios} /> */}
+                {/* <Route path="/dashboard/from-our-scorpios" component={FromOurScorpios} /> */}
+                {/* <Route path="/dashboard/share-scorpio-traits" component={ShareScorpioTraits} /> */}
+                {/* <Route path="/dashboard/marketplace" component={Marketplace} /> */}
+                {/* <Route path="/dashboard/settings" component={Settings} /> */}
                 <Route
                   path="/dashboard"
                   render={
@@ -72,6 +155,7 @@ export default class Dashboard extends Component {
                       return (
                         <DashboardHome
                           visible={visible}
+                          breadcrumbs='Dashboard'
                           // toggleVisibility={this.toggleVisibility}
                           {...routeProps}
                         />

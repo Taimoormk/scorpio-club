@@ -6,8 +6,9 @@ const DashboardHome = (props) => {
     return (
       <div id="dashboard-home">
         <DashboardMainContent
-          visible={visible}
-          toggleVisibility={toggleVisibility}
+          {...props}
+          // visible={visible}
+          // toggleVisibility={toggleVisibility}
         />
       </div>
     );

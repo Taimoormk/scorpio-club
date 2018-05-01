@@ -7,7 +7,7 @@ import ScorpioTraits from './ScorpioTraits';
 import ScorpioGifs from './ScorpioGifs';
 
 const DashboardMainContent = (props) => {
-  const { visible } = props;
+  const { visible, breadcrumbs } = props;
   return (
     <div id="dashboard-main-content">
       <Sidebar.Pushable className="dashboard-main-content" as={Segment}>
@@ -17,7 +17,9 @@ const DashboardMainContent = (props) => {
         <Sidebar.Pusher>
           <Segment.Group raised>
             <Segment>
-              <Breadcrumbs />
+              <Breadcrumbs 
+                breadcrumbs={breadcrumbs}
+              />
               <Header as='h3' className="dashboard-content-heading">Dashboard</Header>
             </Segment>
             <Segment textAlign='center'>
