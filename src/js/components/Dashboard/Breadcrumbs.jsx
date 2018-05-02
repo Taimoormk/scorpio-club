@@ -1,6 +1,7 @@
 // ########## Import Dependencies Here ##########
 import React from 'react';
 import { Breadcrumb } from 'semantic-ui-react';
+import { Link } from 'react-router-dom';
 
 // ########## Import Containers Here ##########
 
@@ -12,7 +13,7 @@ const Breadcrumbs = (props) => {
     <Breadcrumb>
       <Breadcrumb.Section link>Home</Breadcrumb.Section>
       <Breadcrumb.Divider icon='right angle' />
-      <Breadcrumb.Section link>Dashboard</Breadcrumb.Section>
+      <Breadcrumb.Section link><Link to="/dashboard">Dashboard</Link></Breadcrumb.Section>
       <Breadcrumb.Divider icon='right angle' />
       <Breadcrumb.Section active>{breadcrumbs}</Breadcrumb.Section>
     </Breadcrumb>

@@ -29,10 +29,10 @@ const DashboardAppBar = (props) => {
     <div className={styles.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton onClick={toggleVisibility} className={styles.menuButton} color="inherit" aria-label="Menu">
+          <IconButton onClick={toggleVisibility} style={styles.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
-          <Typography variant="title" color="inherit" className={styles.flex}>
+          <Typography variant="title" color="inherit" style={styles.flex}>
             Scorpio Club Dashboard
           </Typography>
         </Toolbar>

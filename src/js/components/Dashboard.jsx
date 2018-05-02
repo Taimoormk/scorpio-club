@@ -61,7 +61,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <CreateGifs
-                          visbible={visible}
+                          visible={visible}
                           breadcrumbs='Create Gifs'
                           {...routeProps}
                         />

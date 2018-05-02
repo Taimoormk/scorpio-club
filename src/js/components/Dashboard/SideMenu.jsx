@@ -15,7 +15,7 @@ class SideMenu extends Component {
     DashboardMenuData.map((item, index) => {
       const menuItem = DashboardMenuData[index];
       return (
-        <Menu.Item id={menuItem.id} name={menuItem.menuItemName}>
+        <Menu.Item key={menuItem.id} name={menuItem.menuItemName}>
           <Icon
             name={menuItem.menuIconName}
           // onClick={toggleVisibility} 

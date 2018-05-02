@@ -5,7 +5,7 @@ import { Sidebar, Segment, Header, Menu } from 'semantic-ui-react';
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
-import Breadcrumbs from './Breadcrumb';
+import Breadcrumbs from './Breadcrumbs';
 import SideMenu from './SideMenu';
 import ScorpioTraits from './ScorpioTraits';
 import ScorpioGifs from './ScorpioGifs';

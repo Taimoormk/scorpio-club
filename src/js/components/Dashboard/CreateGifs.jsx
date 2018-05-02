@@ -1,17 +1,20 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
 import gifshot from 'gifshot';
+import { Sidebar, Segment, Header, Menu, Grid } from 'semantic-ui-react';
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
+import Breadcrumbs from './Breadcrumbs';
+import SideMenu from './SideMenu';
 
-class CreateGifs extends Component {
+export default class CreateGifs extends Component {
 
   createGif = () => {
     gifshot.createGIF({
-      gifWidth: 200,
-      gifHeight: 200,
+      gifWidth: 500,
+      gifHeight: 500,
       interval: 0.1,
       numFrames: 10,
       frameDuration: 1,
@@ -33,13 +36,30 @@ class CreateGifs extends Component {
   }
 
   render() {
+    const { visible, breadcrumbs } = this.props;
     return (
       <div id="create-gifs">
-        Create Gifs
-        {this.createGif()}
+        <Sidebar.Pushable className="create-gifs-main-content" as={Segment}>
+          <Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
+            <SideMenu />
+          </Sidebar>
+          <Sidebar.Pusher>
+            <Segment.Group raised>
+              <Segment>
+                <Breadcrumbs
+                  breadcrumbs={breadcrumbs}
+                />
+                <Header as='h3' className="create-gifs-content-heading">Create Gifs</Header>
+              </Segment>
+              <Segment textAlign='center'>
+                <Header as='h4' className="create-gifs-content-subheading">Welcome, Name Surname</Header>
+              </Segment>
+              {/* <Grid>
+              </Grid> */}
+            </Segment.Group>
+          </Sidebar.Pusher>
+        </Sidebar.Pushable>
       </div>
     );
   }
 }
-
-export default CreateGifs;
