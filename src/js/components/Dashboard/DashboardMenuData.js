@@ -57,11 +57,11 @@ const DashboardMenuData = [
   },
   {
     id: Math.random(),
-    menuItemName: 'setting',
+    menuItemName: 'settings',
     menuIconName: 'setting',
-    menuLinkTo: '/dashboard/setting',
-    menuDisplay: 'Setting',
-    menuBreadcrumbs: 'Setting'
+    menuLinkTo: '/dashboard/settings',
+    menuDisplay: 'Settings',
+    menuBreadcrumbs: 'Settings'
   }
 ]
 

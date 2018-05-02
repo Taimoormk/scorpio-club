@@ -103,7 +103,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <ShareScorpioTraits
-                          visibile={visible}
+                          visible={visible}
                           breadcrumbs='Share Scorpio Traits'
                           {...routeProps}
                         />
@@ -131,7 +131,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <Settings
-                          visibile={visible}
+                          visible={visible}
                           breadcrumbs='Settings'
                           {...routeProps}
                         />
@@ -144,13 +144,10 @@ export default class Dashboard extends Component {
                   toggleVisibility={this.toggleVisibility}
                   render={
                     function (routeProps) {
-                      // console.log('Dashboard', props);
-                      // const { toggleVisibility } = props;
                       return (
                         <DashboardHome
                           visible={visible}
                           breadcrumbs='Dashboard'
-                          // toggleVisibility={toggleVisibility}
                           {...routeProps}
                         />
                       )
