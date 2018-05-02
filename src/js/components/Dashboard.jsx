@@ -70,13 +70,13 @@ export default class Dashboard extends Component {
                   }
                 />
                 <Route
-                  path="/dashboard/notable-scorpios"
+                  path="/dashboard/from-our-scorpios"
                   render={
                     function (routeProps) {
                       return (
-                        <NotableScorpios
+                        <FromOurScorpios
                           visible={visible}
-                          breadcrumbs='Notable Scorpios'
+                          breadcrumbs='From Our Scorpios'
                           {...routeProps}
                         />
                       )
@@ -84,13 +84,13 @@ export default class Dashboard extends Component {
                   }
                 />
                 <Route
-                  path="/dashboard/from-our-scorpios"
+                  path="/dashboard/notable-scorpios"
                   render={
                     function (routeProps) {
                       return (
-                        <FromOurScorpios
-                          visibile={visible}
-                          breadcrumbs='From Our Scorpios'
+                        <NotableScorpios
+                          visible={visible}
+                          breadcrumbs='Notable Scorpios'
                           {...routeProps}
                         />
                       )
@@ -139,12 +139,6 @@ export default class Dashboard extends Component {
                     }
                   }
                 />
-                {/* <Route path="/dashboard/create-gifs" component={CreateGifs} /> */}
-                {/* <Route path="/dashboard/notable-scorpios" component={NotableScorpios} /> */}
-                {/* <Route path="/dashboard/from-our-scorpios" component={FromOurScorpios} /> */}
-                {/* <Route path="/dashboard/share-scorpio-traits" component={ShareScorpioTraits} /> */}
-                {/* <Route path="/dashboard/marketplace" component={Marketplace} /> */}
-                {/* <Route path="/dashboard/settings" component={Settings} /> */}
                 <Route
                   path="/dashboard"
                   toggleVisibility={this.toggleVisibility}

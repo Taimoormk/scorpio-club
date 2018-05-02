@@ -6,6 +6,7 @@ import SideMenu from './SideMenu';
 
 const FromOurScorpios = (props) => {
   const { visible, breadcrumbs } = props;
+  console.log('fromourscorpios',props);
   return (
     <div id="from-our-scorpios">
       <Sidebar.Pushable className="from-our-scorpios-main-content" as={Segment}>

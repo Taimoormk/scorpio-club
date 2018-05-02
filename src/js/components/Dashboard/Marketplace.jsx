@@ -6,6 +6,7 @@ import SideMenu from './SideMenu';
 
 const Marketplace = (props) => {
   const { visible, breadcrumbs } = props;
+  console.log('marketplace',props);
   return (
     <div id="marketplace">
       <Sidebar.Pushable className="marketplace-main-content" as={Segment}>
