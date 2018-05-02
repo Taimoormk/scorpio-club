@@ -147,7 +147,7 @@ export default class Dashboard extends Component {
                       return (
                         <DashboardHome
                           visible={visible}
-                          breadcrumbs='Dashboard'
+                          breadcrumbs='Home'
                           {...routeProps}
                         />
                       )

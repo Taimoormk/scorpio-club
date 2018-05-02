@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React from 'react';
 import { Feed, Segment } from 'semantic-ui-react';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 
 const image = '/images/bill-gates.jpg';
 const date = '3 days ago';

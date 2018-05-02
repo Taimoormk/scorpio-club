@@ -1,7 +1,11 @@
+// ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
 import { Menu, Icon } from 'semantic-ui-react';
 import { Link } from 'react-router-dom';
 
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 import DashboardMenuData from './DashboardMenuData';
 
 class SideMenu extends Component {

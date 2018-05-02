@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React from 'react'
 import { Grid } from 'semantic-ui-react';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 import ScorpioGifsUser from './ScorpioGifsUser';
 
 const ScorpioGifs = () => (

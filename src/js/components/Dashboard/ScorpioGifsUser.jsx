@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React from 'react';
 import { Card, Image, Grid } from 'semantic-ui-react';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 import SocialShare from './SocialShare';
 
 const ScorpioGifsUser = () => (

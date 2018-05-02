@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React from 'react';
 import { Grid, Card, Segment, Image, Rating } from 'semantic-ui-react';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 
 const ScorpioTraitsUser = () => (
   <Grid.Column computer={5} mobile={8}>

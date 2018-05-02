@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
 import gifshot from 'gifshot';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 
 class CreateGifs extends Component {
 

@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
 import { Editor, EditorState } from 'draft-js';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 
 export default class ScorpioTraitsEditor extends Component {
   constructor(props) {
