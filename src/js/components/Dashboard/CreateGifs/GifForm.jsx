@@ -1,6 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React from 'react';
 import { Dropdown } from 'semantic-ui-react';
 
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 import * as options from './GifFormData';
 import GifLabeledInput from './GifLabeledInput';
 import GifInput from './GifInput';

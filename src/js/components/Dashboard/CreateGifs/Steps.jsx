@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React from 'react';
 import { Icon, Step } from 'semantic-ui-react';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 
 const Steps = () => {
   return (

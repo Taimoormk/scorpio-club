@@ -1,5 +1,10 @@
+// ########## Import Dependencies Here ##########
 import React from 'react';
 import { Input } from 'semantic-ui-react';
+
+// ########## Import Containers Here ##########
+
+// ########## Import Components Here ##########
 
 const GifLabeledInput = (props) => {
   const { label, placeholder } = props;
