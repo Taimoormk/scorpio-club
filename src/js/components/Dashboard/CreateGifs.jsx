@@ -1,13 +1,15 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
 import gifshot from 'gifshot';
-import { Sidebar, Segment, Header, Menu, Grid } from 'semantic-ui-react';
+import { Sidebar, Segment, Header, Menu, Grid, Image } from 'semantic-ui-react';
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
 import Breadcrumbs from './Breadcrumbs';
 import SideMenu from './SideMenu';
+import Steps from './CreateGifs/Steps';
+import GifForm from './CreateGifs/GifForm';
 
 export default class CreateGifs extends Component {
 
@@ -54,8 +56,17 @@ export default class CreateGifs extends Component {
               <Segment textAlign='center'>
                 <Header as='h4' className="create-gifs-content-subheading">Welcome, Name Surname</Header>
               </Segment>
-              {/* <Grid>
-              </Grid> */}
+              <Steps />
+              <Grid celled>
+                <Grid.Row>
+                  <Grid.Column width={6}>
+                    <GifForm />
+                  </Grid.Column>
+                  <Grid.Column width={10}>
+                    <Image src='/assets/images/wireframe/centered-paragraph.png' />
+                  </Grid.Column>
+                </Grid.Row>
+              </Grid>
             </Segment.Group>
           </Sidebar.Pusher>
         </Sidebar.Pushable>

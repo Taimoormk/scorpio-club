@@ -11,9 +11,9 @@ const Breadcrumbs = (props) => {
   const { breadcrumbs } = props;
   return(
     <Breadcrumb>
-      <Breadcrumb.Section link>Home</Breadcrumb.Section>
+      <Breadcrumb.Section><Link to="/">Home</Link></Breadcrumb.Section>
       <Breadcrumb.Divider icon='right angle' />
-      <Breadcrumb.Section link><Link to="/dashboard">Dashboard</Link></Breadcrumb.Section>
+      <Breadcrumb.Section><Link to="/dashboard">Dashboard</Link></Breadcrumb.Section>
       <Breadcrumb.Divider icon='right angle' />
       <Breadcrumb.Section active>{breadcrumbs}</Breadcrumb.Section>
     </Breadcrumb>
