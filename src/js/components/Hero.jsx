@@ -13,7 +13,7 @@ const Hero = (props) => {
     <section id="hero">
       <div className="wrapper">
         <div className="hero-content-container">
-          <img className="hero-logo" src="./images/scorpio-club-white.png" alt="Scorpio Club Logo" />
+          <img className="hero-logo" src="/images/scorpio-club-white.png" alt="Scorpio Club Logo" />
           <h1 className="hero-heading">{heroData.sectionHeading}</h1>
           <Typed
             className="hero-subheading"
