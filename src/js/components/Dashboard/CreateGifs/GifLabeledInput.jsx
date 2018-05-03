@@ -7,6 +7,7 @@ const GifLabeledInput = (props) => {
     <Input
       fluid
       label={label}
+      type='number'
       labelPosition='right'
       placeholder={placeholder}
     />

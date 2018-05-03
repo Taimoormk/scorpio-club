@@ -26,6 +26,20 @@ const GifForm = () => {
         type='number'
         placeholder='Number of Frames'
       />
+      <GifInput
+        type='number'
+        placeholder='Frame Duration'
+      />
+      <GifInput
+        type='text'
+        placeholder='GIF Text'
+      />
+      <Dropdown placeholder='Font Weight' fluid selection options={options.gifFontWeight} />
+      <GifLabeledInput
+        label='px'
+        placeholder='Font Size'
+      />
+      <Dropdown placeholder='Font Family' fluid selection options={options.gifFontFamily} />
     </div>
   );
 }
