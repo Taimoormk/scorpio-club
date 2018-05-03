@@ -3,7 +3,7 @@
 @import './partials/mixins';
 @import './partials/variables';
 
-// ########## Import FrontEnd Modules Here ##########
+// ########## Import Public Page Modules Here ##########
 @import './modules/app';
 @import './modules/hero';
 @import './modules/promo';
@@ -15,7 +15,14 @@
 @import './modules/footer';
 @import './modules/signinmodal';
 
-// ########## Import BackEnd Dashboard Modules Here ##########
+// ########## Import Dashboard Modules Here ##########
 @import './modules/dashboard';
 @import './modules/Dashboard/dashboardmaincontent';
 @import './modules/Dashboard/socialshare';
+@import './modules/Dashboard/profile';
+@import './modules/Dashboard/creategifs';
+@import './modules/Dashboard/fromourscorpios';
+@import './modules/Dashboard/notablescorpios';
+@import './modules/Dashboard/sharescorpiotraits';
+@import './modules/Dashboard/marketplace';
+@import './modules/Dashboard/settings';

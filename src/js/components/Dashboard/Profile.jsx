@@ -15,7 +15,7 @@ import ProfileDisplay from './Profile/ProfileDisplay';
 const Profile = (props) => {
   const { visible, breadcrumbs } = props;
   return (
-    <div id="profile-main-content">
+    <div id="profile">
       <Sidebar.Pushable className="profile-main-content" as={Segment}>
         <Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
           <SideMenu />
