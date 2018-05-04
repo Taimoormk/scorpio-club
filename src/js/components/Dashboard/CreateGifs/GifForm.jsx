@@ -44,6 +44,16 @@ const GifForm = () => {
         placeholder='Font Size'
       />
       <Dropdown placeholder='Font Family' fluid selection options={options.gifFontFamily} />
+      <Dropdown placeholder='Text Align' fluid selection options={options.gifTextAlign} />
+      <Dropdown placeholder='Text Baseline' fluid selection options={options.gifTextBaseline} />
+      <GifInput
+        type='number'
+        placeholder='Sample Interval'
+      />
+      <GifInput
+        type='number'
+        placeholder='Num Workers'
+      />
     </div>
   );
 }
