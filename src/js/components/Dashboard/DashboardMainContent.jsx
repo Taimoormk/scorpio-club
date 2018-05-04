@@ -11,12 +11,13 @@ import ScorpioTraits from './ScorpioTraits';
 import ScorpioGifs from './ScorpioGifs';
 
 const DashboardMainContent = (props) => {
-  const { visible, breadcrumbs, toggleVisibility } = props;
+  const { visible, breadcrumbs, toggleVisibility, deactivateSideMenuAction } = props;
   return (
     <div id="dashboard-main-content">
       <Sidebar.Pushable className="dashboard-main-content" as={Segment}>
         <Sidebar as={Menu} animation='overlay' width='thin' visible={visible} icon='labeled' vertical inverted>
-          <SideMenu 
+          <SideMenu
+            deactivateSideMenuAction={deactivateSideMenuAction}
             toggleVisibility={toggleVisibility}
           />
         </Sidebar>

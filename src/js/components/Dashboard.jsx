@@ -1,7 +1,7 @@
 // ########## Import Dependencies Here ##########
 import React, { Component } from 'react';
 // import { arrayOf, shape, func, bool } from 'prop-types';
-// import { connect } from 'react-redux';
+import { connect } from 'react-redux';
 import {
   Route,
   Switch,
@@ -22,8 +22,9 @@ import Marketplace from './Dashboard/Marketplace';
 import Settings from './Dashboard/Settings';
 import Ad from './Dashboard/Ad';
 import DashboardHome from './Dashboard/DashboardHome';
+import * as actions from '../actions';
 
-export default class Dashboard extends Component {
+class Dashboard extends Component {
 
   state = { visible: false };
 
@@ -31,10 +32,12 @@ export default class Dashboard extends Component {
 
   render() {
     const { visible } = this.state;
+    const { toggleSideMenu, activateSideMenuAction, deactivateSideMenuAction } = this.props;
     return (
       <div id="dashboard">
         <DashboardAppBar
           toggleVisibility={this.toggleVisibility}
+          activateSideMenuAction={activateSideMenuAction}
         />
         <div className="dashboard-content">
           <div className="dashboard-main-content">
@@ -46,9 +49,8 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <Profile
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='Profile'
-                          // toggleVisibility={toggleVisibility}
                           {...routeProps}
                         />
                       )
@@ -61,7 +63,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <CreateGifs
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='Create Gifs'
                           {...routeProps}
                         />
@@ -75,7 +77,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <FromOurScorpios
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='From Our Scorpios'
                           {...routeProps}
                         />
@@ -89,7 +91,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <NotableScorpios
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='Notable Scorpios'
                           {...routeProps}
                         />
@@ -103,7 +105,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <ShareScorpioTraits
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='Share Scorpio Traits'
                           {...routeProps}
                         />
@@ -117,7 +119,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <Marketplace
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='Marketplace'
                           {...routeProps}
                         />
@@ -131,7 +133,7 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <Settings
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='Settings'
                           {...routeProps}
                         />
@@ -146,8 +148,9 @@ export default class Dashboard extends Component {
                     function (routeProps) {
                       return (
                         <DashboardHome
-                          visible={visible}
+                          visible={toggleSideMenu.sideMenuActive}
                           breadcrumbs='Home'
+                          deactivateSideMenuAction={deactivateSideMenuAction}
                           {...routeProps}
                         />
                       )
@@ -168,3 +171,14 @@ export default class Dashboard extends Component {
     );
   }
 }
+
+function mapStateToProps({ toggleSideMenuReducer }) {
+  return {
+    toggleSideMenu: toggleSideMenuReducer
+  }
+}
+
+export default connect(mapStateToProps, {
+  activateSideMenuAction: actions.activateSideMenuAction,
+  deactivateSideMenuAction: actions.deactivateSideMenuAction
+})(Dashboard);

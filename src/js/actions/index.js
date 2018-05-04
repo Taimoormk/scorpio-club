@@ -48,3 +48,15 @@ export function signOutAction(value) {
     payload: value
   }
 }
+
+export function activateSideMenuAction() {
+  return {
+    type: types.OPEN_SIDE_MENU
+  }
+}
+
+export function deactivateSideMenuAction() {
+  return {
+    type: types.CLOSE_SIDE_MENU
+  }
+}

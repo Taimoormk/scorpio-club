@@ -24,12 +24,12 @@ const styles = {
 };
 
 const DashboardAppBar = (props) => {
-  const { toggleVisibility } = props;
+  const { toggleVisibility, activateSideMenuAction } = props;
   return (
     <div className={styles.root}>
       <AppBar position="static">
         <Toolbar>
-          <IconButton onClick={toggleVisibility} style={styles.menuButton} color="inherit" aria-label="Menu">
+          <IconButton onClick={activateSideMenuAction} style={styles.menuButton} color="inherit" aria-label="Menu">
             <MenuIcon />
           </IconButton>
           <Typography variant="title" color="inherit" style={styles.flex}>

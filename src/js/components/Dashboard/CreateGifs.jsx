@@ -63,7 +63,7 @@ export default class CreateGifs extends Component {
                     <GifForm />
                   </Grid.Column>
                   <Grid.Column width={10}>
-                    <Image src='/assets/images/wireframe/centered-paragraph.png' />
+                    <Image src='/images/patrick.png' />
                   </Grid.Column>
                 </Grid.Row>
               </Grid>
