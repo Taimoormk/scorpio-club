@@ -7,6 +7,7 @@ import { Sidebar, Segment, Header, Menu } from 'semantic-ui-react';
 // ########## Import Components Here ##########
 import Breadcrumbs from './Breadcrumbs';
 import SideMenu from './SideMenu';
+import MarketplaceProducts from './Marketplace/MarketplaceProducts';
 
 const Marketplace = (props) => {
   const { visible, breadcrumbs } = props;
@@ -26,6 +27,9 @@ const Marketplace = (props) => {
             </Segment>
             <Segment textAlign='center'>
               <Header as='h4' className="marketplace-content-subheading">Welcome, Name Surname</Header>
+            </Segment>
+            <Segment textAlign='center'>
+              <MarketplaceProducts />
             </Segment>
           </Segment.Group>
         </Sidebar.Pusher>
