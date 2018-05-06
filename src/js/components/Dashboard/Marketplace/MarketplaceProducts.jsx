@@ -1,12 +1,13 @@
 // ########## Import Dependencies Here ##########
 import React, { Component, Fragment } from 'react';
 import { Grid, Image, Label, Segment, Menu } from 'semantic-ui-react';
-import Tshirts from './Tshirts';
-import Hoodies from './Hoodies';
 
 // ########## Import Containers Here ##########
 
 // ########## Import Components Here ##########
+import Tshirts from './Tshirts';
+import Hoodies from './Hoodies';
+import Pagenumbering from './Pagenumbering';
 
 class MarketplaceProducts extends Component {
 
@@ -18,7 +19,7 @@ class MarketplaceProducts extends Component {
     const { activeItem } = this.state;
     return (
       <Fragment>
-        <Grid>
+        {/* <Grid>
           <Grid.Row columns={4}>
             <Grid.Column>
               <Segment>
@@ -47,7 +48,7 @@ class MarketplaceProducts extends Component {
               </Segment>
             </Grid.Column>
           </Grid.Row>
-        </Grid>
+        </Grid> */}
         <Grid>
           <Grid.Column width={2}>
             <Menu fluid vertical tabular>

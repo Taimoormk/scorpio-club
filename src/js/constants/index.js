@@ -11,3 +11,6 @@ export const SIGN_OUT = 'SIGN_OUT';
 
 export const OPEN_SIDE_MENU = 'OPEN_SIDE_MENU';
 export const CLOSE_SIDE_MENU = 'CLOSE_SIDE_MENU';
+
+export const OPEN_SHARE_PORTAL = 'OPEN_SHARE_PORTAL';
+export const CLOSE_SHARE_PORTAL = 'CLOSE_SHARE_PORTAL';

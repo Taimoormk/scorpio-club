@@ -28,7 +28,9 @@ const Marketplace = (props) => {
             <Segment textAlign='center'>
               <Header as='h4' className="marketplace-content-subheading">Welcome, Name Surname</Header>
             </Segment>
-            <Segment textAlign='center'>
+            <Segment 
+              // textAlign='center'
+            >
               <MarketplaceProducts />
             </Segment>
           </Segment.Group>

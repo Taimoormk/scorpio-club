@@ -60,3 +60,15 @@ export function deactivateSideMenuAction() {
     type: types.CLOSE_SIDE_MENU
   }
 }
+
+export function openSharePortalAction() {
+  return {
+    type: types.OPEN_SHARE_PORTAL
+  }
+}
+
+export function closeSharePortalAction() {
+  return {
+    type: types.CLOSE_SHARE_PORTAL
+  }
+}

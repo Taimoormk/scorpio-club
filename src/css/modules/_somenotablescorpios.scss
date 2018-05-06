@@ -1,6 +1,6 @@
 #some-notable-scorpios {
   width: 100%;
-  background: $background-image-color url('./images/some-notable-scorpios.jpg') no-repeat center;
+  background: $background-image-color url('/images/some-notable-scorpios.jpg') no-repeat center;
   background-size: cover;
   .wrapper {
     @include wrapper($wrapper-width);

@@ -1,6 +1,6 @@
 #lets-be-in-touch {
   width: 100%;
-  background: $background-image-color url('./images/get-in-touch.jpg') no-repeat center;
+  background: $background-image-color url('/images/get-in-touch.jpg') no-repeat center;
   background-size: cover;
   .wrapper {
     @include wrapper($wrapper-width);
