@@ -12,7 +12,15 @@ import MarketplaceProducts from './Marketplace/MarketplaceProducts';
 import * as actions from '../../actions';
 
 const Marketplace = (props) => {
-  const { visible, breadcrumbs, toggleMarketplaceMenu, switchMarketplaceMenuAction } = props;
+  const { 
+    visible, 
+    breadcrumbs, 
+    toggleMarketplaceMenu, 
+    switchMarketplaceMenuAction,
+    toggleSharePortal,
+    openSharePortalAction,
+    closeSharePortalAction
+  } = props;
   return (
     <div id="marketplace">
       <Sidebar.Pushable className="marketplace-main-content" as={Segment}>
@@ -36,6 +44,9 @@ const Marketplace = (props) => {
               <MarketplaceProducts
                 toggleMarketplaceMenu={toggleMarketplaceMenu}
                 switchMarketplaceMenuAction={switchMarketplaceMenuAction}
+                toggleSharePortal={toggleSharePortal}
+                openSharePortalAction={openSharePortalAction}
+                closeSharePortalAction={closeSharePortalAction}
               />
             </Segment>
           </Segment.Group>
@@ -45,12 +56,15 @@ const Marketplace = (props) => {
   );
 }
 
-function mapStateToProps({ toggleMarketplaceMenuReducer }) {
+function mapStateToProps({ toggleMarketplaceMenuReducer, toggleSharePortalReducer }) {
   return {
-    toggleMarketplaceMenu: toggleMarketplaceMenuReducer
+    toggleMarketplaceMenu: toggleMarketplaceMenuReducer,
+    toggleSharePortal: toggleSharePortalReducer
   }
 }
 
 export default connect(mapStateToProps, {
-  switchMarketplaceMenuAction: actions.switchMarketplaceMenuAction
+  switchMarketplaceMenuAction: actions.switchMarketplaceMenuAction,
+  openSharePortalAction: actions.openSharePortalAction,
+  closeSharePortalAction: actions.closeSharePortalAction
 })(Marketplace);

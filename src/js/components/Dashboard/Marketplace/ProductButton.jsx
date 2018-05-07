@@ -1,6 +1,5 @@
 // ########## Import Dependencies Here ##########
 import React, { Fragment } from 'react';
-import { connect } from 'react-redux';
 import { Button, Icon, Label } from 'semantic-ui-react';
 
 // ########## Import Containers Here ##########
@@ -10,7 +9,11 @@ import * as actions from '../../../actions';
 import SharePortal from './SharePortal';
 
 const ProductButton = (props) => {
-  const { openSharePortalAction, closeSharePortalAction, toggleSharePortal } = props;
+  const {
+    toggleSharePortal,
+    openSharePortalAction,
+    closeSharePortalAction
+  } = props;
   return (
     <Fragment>
       <Button as='div' labelPosition='right'>
@@ -22,7 +25,7 @@ const ProductButton = (props) => {
       </Button>
       <Button as='div' labelPosition='left'>
         <Label as='a' basic pointing='right'>48</Label>
-        <Button 
+        <Button
           icon
           onClick={openSharePortalAction}
         >
@@ -30,7 +33,7 @@ const ProductButton = (props) => {
           Share
         </Button>
       </Button>
-      <SharePortal 
+      <SharePortal
         toggleSharePortal={toggleSharePortal}
         closeSharePortalAction={closeSharePortalAction}
       />
@@ -38,13 +41,4 @@ const ProductButton = (props) => {
   );
 }
 
-function mapStateToProps({ toggleSharePortalReducer }) {
-  return {
-    toggleSharePortal: toggleSharePortalReducer
-  };
-}
-
-export default connect(mapStateToProps, {
-  openSharePortalAction: actions.openSharePortalAction,
-  closeSharePortalAction: actions.closeSharePortalAction
-})(ProductButton);
+export default ProductButton;

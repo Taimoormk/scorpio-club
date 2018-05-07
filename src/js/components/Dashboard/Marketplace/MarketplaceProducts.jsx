@@ -9,7 +9,13 @@ import Tshirts from './Tshirts';
 import Hoodies from './Hoodies';
 
 const MarketplaceProducts = (props) => {
-  const { toggleMarketplaceMenu, switchMarketplaceMenuAction } = props;
+  const {
+    toggleMarketplaceMenu,
+    switchMarketplaceMenuAction,
+    toggleSharePortal,
+    openSharePortalAction,
+    closeSharePortalAction
+  } = props;
   return (
     <Fragment>
       <Grid>
@@ -39,8 +45,8 @@ const MarketplaceProducts = (props) => {
         </Grid.Column>
         <Grid.Column stretched width={14}>
           <Segment>
-            {toggleMarketplaceMenu.activeItem === 'tshirts' && <Tshirts />}
-            {toggleMarketplaceMenu.activeItem === 'hoodies' && <Hoodies />}
+            {toggleMarketplaceMenu.activeItem === 'tshirts' && <Tshirts {...props} />}
+            {toggleMarketplaceMenu.activeItem === 'hoodies' && <Hoodies {...props} />}
           </Segment>
         </Grid.Column>
       </Grid>

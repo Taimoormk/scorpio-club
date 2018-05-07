@@ -7,7 +7,7 @@ import { Grid, Image, Label, Segment, Menu, SegmentGroup, Header, Divider } from
 // ########## Import Components Here ##########
 import ProductButton from './ProductButton';
 
-const Tshirts = () => {
+const Tshirts = (props) => {
   return (
     <Fragment>
       <Grid>
@@ -24,7 +24,7 @@ const Tshirts = () => {
                 <Header as='h4'>Fourth Header</Header>
                 <Header.Subheader>A para to describe about the product that you are about to make purchase.</Header.Subheader>
                 <Divider />
-                <ProductButton />
+                <ProductButton {...props} />
               </Segment>
             </Segment.Group>
           </Grid.Column>
