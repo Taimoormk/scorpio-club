@@ -10,17 +10,22 @@ import * as actions from '../../../actions';
 import SocialShare from '../SocialShare';
 
 const SharePortal = (props) => {
-    const { closeSharePortalAction, toggleSharePortal } = props;
-    return (
-      <Fragment>
-        <Portal onClose={closeSharePortalAction} open={toggleSharePortal.portalActive}>
-          <Segment style={{ left: '40%', position: 'fixed', top: '50%', zIndex: 1000 }}>
-            <Header>Share our content with the world</Header>
-            <SocialShare />
-          </Segment>
-        </Portal>
-      </Fragment>
-    );
-  }
+  const { closeSharePortalAction, toggleSharePortal } = props;
+  return (
+    <Fragment>
+      <Portal
+        onClose={closeSharePortalAction}
+        open={toggleSharePortal.portalActive}
+      >
+        <Segment 
+          style={{ left: '30%', position: 'fixed', top: '50%', zIndex: 1 }}
+        >
+          <Header>Share the content with the world</Header>
+          <SocialShare />
+        </Segment>
+      </Portal>
+    </Fragment>
+  );
+}
 
 export default SharePortal;

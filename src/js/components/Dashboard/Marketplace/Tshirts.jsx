@@ -11,7 +11,7 @@ const Tshirts = () => {
   return (
     <Fragment>
       <Grid>
-        <Grid.Row columns={4}>
+        <Grid.Row columns={3}>
           <Grid.Column>
             <Segment.Group>
               <Segment>

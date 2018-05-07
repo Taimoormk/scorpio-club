@@ -11,7 +11,6 @@ import SharePortal from './SharePortal';
 
 const ProductButton = (props) => {
   const { openSharePortalAction, closeSharePortalAction, toggleSharePortal } = props;
-  console.log('props', props);
   return (
     <Fragment>
       <Button as='div' labelPosition='right'>
