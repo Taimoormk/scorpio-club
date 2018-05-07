@@ -9,28 +9,39 @@ import Tshirts from './Tshirts';
 import Hoodies from './Hoodies';
 
 class MarketplaceProducts extends Component {
-
-  state = { activeItem: 'tshirts' }
-
-  handleItemClick = (e, { name }) => this.setState({ activeItem: name })
-
   render() {
-    const { activeItem } = this.state;
+    const { toggleMarketplaceMenu, switchMarketplaceMenuAction } = this.props;
     return (
       <Fragment>
         <Grid>
           <Grid.Column width={2}>
             <Menu fluid vertical tabular>
-              <Menu.Item name='tshirts' active={activeItem === 'tshirts'} onClick={this.handleItemClick} />
-              <Menu.Item name='hoodies' active={activeItem === 'hoodies'} onClick={this.handleItemClick} />
-              <Menu.Item name='mugs' active={activeItem === 'mugs'} onClick={this.handleItemClick} />
-              <Menu.Item name='etc' active={activeItem === 'etc'} onClick={this.handleItemClick} />
+              <Menu.Item
+                name='tshirts'
+                active={toggleMarketplaceMenu.activeItem === 'tshirts'}
+                onClick={() => switchMarketplaceMenuAction('thsirts')}
+              />
+              <Menu.Item
+                name='hoodies'
+                active={toggleMarketplaceMenu.activeItem === 'hoodies'}
+                onClick={() => switchMarketplaceMenuAction('hoodies')}
+              />
+              <Menu.Item
+                name='mugs'
+                active={toggleMarketplaceMenu.activeItem === 'mugs'}
+                onClick={this.handleItemClick}
+              />
+              <Menu.Item
+                name='etc'
+                active={toggleMarketplaceMenu.activeItem === 'etc'}
+                onClick={this.handleItemClick}
+              />
             </Menu>
           </Grid.Column>
           <Grid.Column stretched width={14}>
             <Segment>
-              {activeItem === 'tshirts' && <Tshirts />}
-              {activeItem === 'hoodies' && <Hoodies />}
+              {toggleMarketplaceMenu.activeItem === 'tshirts' && <Tshirts />}
+              {toggleMarketplaceMenu.activeItem === 'hoodies' && <Hoodies />}
             </Segment>
           </Grid.Column>
         </Grid>

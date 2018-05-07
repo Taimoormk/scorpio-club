@@ -1,5 +1,6 @@
 // ########## Import Dependencies Here ##########
 import React from 'react';
+import { connect } from 'react-redux';
 import { Sidebar, Segment, Header, Menu } from 'semantic-ui-react';
 
 // ########## Import Containers Here ##########
@@ -8,9 +9,10 @@ import { Sidebar, Segment, Header, Menu } from 'semantic-ui-react';
 import Breadcrumbs from './Breadcrumbs';
 import SideMenu from './SideMenu';
 import MarketplaceProducts from './Marketplace/MarketplaceProducts';
+import * as actions from '../../actions';
 
 const Marketplace = (props) => {
-  const { visible, breadcrumbs } = props;
+  const { visible, breadcrumbs, toggleMarketplaceMenu, switchMarketplaceMenuAction } = props;
   return (
     <div id="marketplace">
       <Sidebar.Pushable className="marketplace-main-content" as={Segment}>
@@ -28,10 +30,13 @@ const Marketplace = (props) => {
             <Segment textAlign='center'>
               <Header as='h4' className="marketplace-content-subheading">Welcome, Name Surname</Header>
             </Segment>
-            <Segment 
-              // textAlign='center'
+            <Segment
+            // textAlign='center'
             >
-              <MarketplaceProducts />
+              <MarketplaceProducts
+                toggleMarketplaceMenu={toggleMarketplaceMenu}
+                switchMarketplaceMenuAction={switchMarketplaceMenuAction}
+              />
             </Segment>
           </Segment.Group>
         </Sidebar.Pusher>
@@ -40,4 +45,12 @@ const Marketplace = (props) => {
   );
 }
 
-export default Marketplace;
+function mapStateToProps({ toggleMarketplaceMenuReducer }) {
+  return {
+    toggleMarketplaceMenu: toggleMarketplaceMenuReducer
+  }
+}
+
+export default connect(mapStateToProps, {
+  switchMarketplaceMenuAction: actions.switchMarketplaceMenuAction
+})(Marketplace);

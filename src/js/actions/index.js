@@ -72,3 +72,10 @@ export function closeSharePortalAction() {
     type: types.CLOSE_SHARE_PORTAL
   }
 }
+
+export function switchMarketplaceMenuAction(itemName) {
+  return {
+    type: types.SWITCH_MARKETPLACE_MENU,
+    payload: itemName
+  }
+}
